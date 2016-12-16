@@ -1,3 +1,4 @@
+------------------
 Sequence databases
 ------------------
 
@@ -51,6 +52,7 @@ Sequence databases
 
 The default database is UniProt reference proteomes.
 
+---------------------
 Profile HMM databases
 ---------------------
 
@@ -75,6 +77,7 @@ Profile HMM databases
 
 The default database is Pfam.
 
+-----------------
 Search provenance
 -----------------
 

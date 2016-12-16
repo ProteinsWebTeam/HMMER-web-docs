@@ -17,7 +17,9 @@ B.L. Miller, T.J. Wheeler, F. Schreiber, A. Bateman and S.R. Eddy
 Nucleic Acids Research (2015) Web Server Issue 43:W30-W38.
 `10.1093/nar/gkv397 <https://nar.oxfordjournals.org/content/43/W1/W30.full.pdf>`_
 
+----------------
 Staying Informed
+----------------
 
 The target databases are updated on a monthly basis. Additionally there will
 be bug fixes and new website features. To keep up to date with these, see one of the
@@ -32,7 +34,9 @@ following:
 * Cryptogenomicon blog - more detailed discussions of HMMER related
   topics, including the website.
 
+--------
 Helpdesk
+--------
 
 Your questions are important to us. Please contact us at hmmer-help@ebi.ac.uk.
 We will respond as quickly as possible, but please bear
