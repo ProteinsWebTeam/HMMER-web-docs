@@ -1,3 +1,6 @@
+Help
+====
+
 These help pages are primarily designed to give users a very brief
 introduction to HMMER, sufficient such that the user will have a better
 understanding of the website search methods and results. They do
