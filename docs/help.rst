@@ -7,7 +7,9 @@ understanding of the website search methods and results. They do
 not describe the details of profile hidden Markov models (HMMs) in the
 use of sequence analysis.
 
+-----------
 How to cite
+-----------
 
 If you have used the HMMER website, please consider citing the following
 reference that describes this work:
