@@ -6,11 +6,12 @@
 The HMMER web server
 ====================
 
-Contents:
+DBs:
 
 .. toctree::
    :maxdepth: 2
 
+   algo
    db
 
 
