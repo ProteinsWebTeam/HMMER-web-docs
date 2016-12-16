@@ -13,6 +13,7 @@ DBs:
 
    algorithms
    databases
+   help
 
 
 Indices and tables
