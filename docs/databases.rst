@@ -37,9 +37,9 @@ Sequence databases
 
   - `Ensembl Genomes <http://www.ensemblgenomes.org>`_ - Searches may be performed across the entire set or one
     of the subsets:
-    `Bacteria <http://bacteria.ensembl.org/index.html>`_
-    `Fungi <http://fungi.ensembl.org/index.html>`_
-    `Metazoa <http://metazoa.ensembl.org/index.html>`_
+    `Bacteria <http://bacteria.ensembl.org/index.html>`_,
+    `Fungi <http://fungi.ensembl.org/index.html>`_,
+    `Metazoa <http://metazoa.ensembl.org/index.html>`_,
     `Plants <http://plants.ensembl.org/index.html>`_
     and `Protists <http://protists.ensembl.org/index.html>`_.
 
