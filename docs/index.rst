@@ -11,8 +11,8 @@ DBs:
 .. toctree::
    :maxdepth: 2
 
-   algo
-   db
+   algorithms
+   databases
 
 
 Indices and tables

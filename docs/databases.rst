@@ -26,8 +26,8 @@ Sequence databases
     also includes model organisms and viral reference proteomes as defined
     by UniProt. The complete proteomes database comes from PIR.
 
-  - `Reference Proteomes <http://www.uniprot.org>`_ - A set of proteomes from UniProt that give broad
-    coverage of the tree of life, and constitute a representative
+  - `Reference Proteomes <http://www.uniprot.org>`_ - A set of proteomes from UniProt that gives broad
+    coverage of the tree of life, and constitutes a representative
     cross-section of the taxonomic diversity to be found within UniProtKB.
     Produced by UniProt, in collaboration with Ensembl and the NCBI
     Reference Sequence collection.
