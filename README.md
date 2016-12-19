@@ -1,2 +1,2 @@
-# HMMER-docs
-HMMER web server  documentation
+# HMMER-web-docs
+HMMER webserver documentation

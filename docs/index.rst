@@ -6,7 +6,7 @@
 The HMMER web server
 ====================
 
-DBs:
+Contents:
 
 .. toctree::
    :maxdepth: 2
