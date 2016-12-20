@@ -26,7 +26,7 @@ This software has been released as part of the
 HMMER software package (version 3.1)
 
 --------------
-Other Programs
+Other programs
 --------------
 
 The following is a brief description of the other programs in the HMMER

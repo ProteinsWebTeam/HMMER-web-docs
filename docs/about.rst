@@ -1,5 +1,9 @@
+About HMMER
+===========
+
+-------------
 HMMER project
-=============
+-------------
 
 The HMMER project is a collaborative project between the HMMER algorithm
 developers, led by `Sean Eddy <eddylab.org>`_ at

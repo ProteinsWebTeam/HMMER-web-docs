@@ -1,6 +1,9 @@
 Target databases
 ================
 
+The HMMER web service supports querying against a range of
+regularly updated sequence and HMM target databases.
+
 ------------------
 Sequence databases
 ------------------

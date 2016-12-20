@@ -7,20 +7,16 @@ understanding of the website search methods and results. They do
 not describe the details of profile hidden Markov models (HMMs) in the
 use of sequence analysis.
 
------------
-How to cite
------------
+--------
+Helpdesk
+--------
 
-If you have used the HMMER website, please consider citing the following
-reference that describes this work:
-
-HMMER web server: 2015 update R.D. Finn, J. Clements, W. Arndt,
-B.L. Miller, T.J. Wheeler, F. Schreiber, A. Bateman and S.R. Eddy
-Nucleic Acids Research (2015) Web Server Issue 43:W30-W38.
-`10.1093/nar/gkv397 <https://nar.oxfordjournals.org/content/43/W1/W30.full.pdf>`_
+Your questions are important to us. Please contact us at hmmer-help@ebi.ac.uk.
+We will respond as quickly as possible, but please bear
+in mind that we do not have a dedicated staff member to run the helpesk.
 
 ----------------
-Staying Informed
+Staying informed
 ----------------
 
 The target databases are updated on a monthly basis. Additionally there will
@@ -36,10 +32,14 @@ following:
 * Cryptogenomicon blog - more detailed discussions of HMMER related
   topics, including the website.
 
---------
-Helpdesk
---------
+-----------
+How to cite
+-----------
 
-Your questions are important to us. Please contact us at hmmer-help@ebi.ac.uk.
-We will respond as quickly as possible, but please bear
-in mind that we do not have a dedicated staff member to run the helpesk.
+If you have used the HMMER website, please consider citing the following
+publication that describes this work:
+
+HMMER web server: 2015 update R.D. Finn, J. Clements, W. Arndt,
+B.L. Miller, T.J. Wheeler, F. Schreiber, A. Bateman and S.R. Eddy
+Nucleic Acids Research (2015) Web Server Issue 43:W30-W38.
+`10.1093/nar/gkv397 <https://nar.oxfordjournals.org/content/43/W1/W30.full.pdf>`_
