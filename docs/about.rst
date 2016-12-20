@@ -34,21 +34,18 @@ HMMER is supported by
 
 .. image:: _static/images/embl_logo.png
    :alt: EMBL-EBI
-   :align: left
    :target: http://www.embl.org
 
 EMBL is EMBL-EBI's parent organisation. It provides core funding for HMMER.
 
 .. image:: _static/images/hhmi_logo.jpg
    :alt: HHMI
-   :align: left
    :target: http://www.hhmi.org
 
 The Howard Hughes Medical Institute supports the Eddy group.
 
 .. image:: _static/images/wt_logo.jpg
    :alt: Wellcome Trust
-   :align: left
    :target: http://www.wellcome.ac.uk
 
 As well as providing and maintaining the campus on which the EMBL-EBI is located,
