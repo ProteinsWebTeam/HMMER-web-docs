@@ -25,3 +25,28 @@ In addition to the human interactive website, we have developed
 an API that allows simple machine access to the same infrastructure. This
 should allow relatively large scale analysis to be performed in a
 timely fashion.
+
+--------
+Sponsors
+--------
+
+HMMER is supported by
+
+.. image:: _static/images/embl_logo.png
+   :alt: EMBL-EBI
+   :align: left
+   :target: http://www.embl.org
+EMBL is EMBL-EBI's parent organisation. It provides core funding for HMMER.
+
+.. image:: _static/images/hhmi_logo.jpg
+   :alt: HHMI
+   :align: left
+   :target: http://www.hhmi.org
+The Howard Hughes Medical Institute supports the Eddy group.
+
+.. image:: _static/images/wt_logo.jpg
+   :alt: Wellcome Trust
+   :align: left
+   :target: http://www.wellcome.ac.uk
+As well as providing and maintaining the campus on which the EMBL-EBI is located, the Wellcome Trust also now provides funding for HMMER.
+
