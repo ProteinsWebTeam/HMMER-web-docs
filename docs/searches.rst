@@ -181,9 +181,12 @@ jackhmmer
 | Filter                               | Bias composition filtering on                      |
 +--------------------------------------+----------------------------------------------------+
 
-------------------
+---------
+Databases
+---------
+
 Sequence databases
-------------------
+++++++++++++++++++
 
 The sequence database field changes which target sequence database is searched.
 The default is UniProt references proteomes.
@@ -205,9 +208,8 @@ This is one of the few parameters that is required by phmmer, hmmsearch or jackh
 | Required        | Yes                                   |
 +-----------------+---------------------------------------+
 
--------------
 HMM databases
--------------
++++++++++++++
 
 This field indicates which profile HMM database the query should be searched against.
 
@@ -402,6 +404,53 @@ overlapping matches. Each database uses an internal E-value cut-off of
 bit score thresholds. Thus, cut-off manipulation has been disabled for
 these databases, thereby faithfully replicating the results of these
 HMM databases.
+
+-----------------------
+Advanced saerch options 
+-----------------------
+
+Customisation of Results
+++++++++++++++++++++++++
+
+The result table may be customised to display different columns and/or to
+restrict the number of rows in the table to a manageable number. This can
+be performed before or after the search, with the customisation stored
+in a cookie so that you will not have to keep re-configuring the table
+after each search.
+
+Pfam Search
++++++++++++
+
+By default when performing a phmmer search via the website (and when
+JavaScript is enabled), a default hmmscan search against the Pfam HMM
+library is also performed. This feature is not available via the API,
+but can be mimicked by making separate requests to phmmer and hmmscan.
+
+Filters
++++++++
+
+Bias Composition
+^^^^^^^^^^^^^^^^
+
+Turning off the bias composition filter can increases sensitivity,
+but at a high cost in speed, especially if the query has biased residue
+composition (such as a repetitive sequence region, or a membrane
+protein with large regions of hydrophobicity). Without the bias filter,
+too many sequences may pass the filter with biased queries, leading
+to slower than expected performance, hence it is switched on by default.
+This feature can be disabled using the nobias parameter.
+
++-----------------+------------------------------------------+
+| Parameter name  | nobias                                   |
++-----------------+------------------------------------------+
+| Description     | Turns off the bias composition filtering |
++-----------------+------------------------------------------+
+| Algorithms      | phmmer, hmmscan, hmmsearch, jackhmmer    |
++-----------------+------------------------------------------+
+| Accepted Values | 1                                        |
++-----------------+------------------------------------------+
+| Required        | No                                       |
++-----------------+------------------------------------------+
 
 --------------
 Batch Searches
