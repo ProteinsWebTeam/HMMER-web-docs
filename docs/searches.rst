@@ -38,21 +38,46 @@
 Searches
 ========
 
-Four search types are supported: phmmer, hmmsearch, hmmscan and jackhmmer.
+Four search types are supported: **phmmer**, **hmmsearch**, **hmmscan** and **jackhmmer**.
 See :ref:`HMMER algorithms` for more information.
+
+There are many different ways that a search on the website can be
+modified. Below is a list of the different accepted inputs and the
+parameters that can be modified. Also included are the parameter names
+that are required when using the API. This section is meant to be a
+guide to using the website, but further information can be found in the
+extensive `HMMER guide <http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf>`_.
+The parameter names used on the site are
+typically the same as the command line parameters, with the exception of
+the input data parameters. Each section is followed by a summary table
+that can be used as a quick reference.
 
 ------------
 Search query
 ------------
 
-phmmer, hmmscan and jackhmmer searches take a single protein amino acid sequence
-as the input. The website
+**phmmer**, **hmmscan** and jackhmmer searches take a **single protein amino acid sequence**
+as the input, controlled by the **seq** parameter. The website
 accepts either `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ format or an amino acid sequence.
-Alternatively, you can query by sequence accession or identifier
-which will offer suggestions as the
+Alternatively, a sequence can be specified by **accession** or **identifier**. When using the website,
+suggestions will be offered as the
 name is typed.
 
-hmmsearch and jackhmmer searches can take either a multiple protein sequence alignment
++-----------------+--------------------------+-------------------------------------------------------------+
+| Parameter name  | seq                      | acc                                                         |
++-----------------+--------------------------+-------------------------------------------------------------+
+| Description     | Sets the query sequence                                                                |
++-----------------+--------------------------+-------------------------------------------------------------+
+| Algorithm(s)    | phmmer, hmmscan, jackhmmer                                                             |
++-----------------+--------------------------+-------------------------------------------------------------+
+| Accepted values | Protein sequence (FASTA) | Accession or identifier from one of the supported databases |
++-----------------+--------------------------+-------------------------------------------------------------+
+| Default         | None                     |  None                                                       |
++-----------------+--------------------------+-------------------------------------------------------------+
+| Required        |  Yes (seq or acc)                                                                      |
++-----------------+--------------------------+-------------------------------------------------------------+
+
+**hmmsearch** and **jackhmmer** searches can take either a multiple protein sequence alignment
 as an input or a profile HMM. The alignment formats currently accepted are:
 
 * Aligned FASTA
@@ -61,21 +86,21 @@ as an input or a profile HMM. The alignment formats currently accepted are:
 * PHYLIP
 * Selex
 * GCG/MSF
-* STOCKHOLM format
+* `STOCKHOLM <https://en.wikipedia.org/wiki/Stockholm_format>`_ format
 * UC Santa Cruz A2M (alignment to model)
 
-Profile HMMs can be
-entered as text-format via the website or via the seq parameter or
-better via a file and using the file parameter when using the API.
-Alternatively, it is also possible to retrieve HMMs from one of the five
-supported HMM databases (Pfam, TIGRFAM, Gene3D, Superfamily and Pirsf) by using
-the accession/identifier look up, similar to the sequence look up
-described in the previous section. If you want to restrict the look up
-to one particular HMM database, append @ followed by the database name
-(all lower case) e.g. CBS@pfam.
+The algorithms **hmmsearch** and **jackhmmer** also permit searches to be initiated with a profile HMM.
+This can be entered as text via the website, or via the seq or file parameters
+when using the API.
+Alternatively, it is also possible to retrieve HMMs from one of the
+supported HMM databases using
+the accession/identifier look up (in a similar manner to the sequence look up
+described earlier). To restrict the look up
+to one particular HMM database, append "@" followed by the database name
+(all lower case) e.g. CBS\@pfam.
 
 --------------
-Input examples
+Query examples
 --------------
 
 For each of the search algorithms, examples sequences/alignments are provided
@@ -96,7 +121,7 @@ phmmer
 ++++++
 
 +--------------------------------------+----------------------------------------------------+
-| Sequence database                    | Uniprot reference proteomes                        |
+| Sequence database                    | UniProt reference proteomes                        |
 +--------------------------------------+----------------------------------------------------+
 | Significance threshold (E-value)     | |parameters.incE.default| for sequence matches;    |
 |                                      | |parameters.incdomE.default| for hit matches       |                              
@@ -128,7 +153,7 @@ hmmsearch
 +++++++++
 
 +--------------------------------------+----------------------------------------------------+
-| Sequence database                    | Uniprot reference proteomes                        |
+| Sequence database                    | UniProt reference proteomes                        |
 +--------------------------------------+----------------------------------------------------+
 | Significance threshold (E-value)     | |parameters.incE.default| for sequence matches,    |
 |                                      | |parameters.incdomE.default| for hit matches       |                            
@@ -142,7 +167,7 @@ jackhmmer
 +++++++++
 
 +--------------------------------------+----------------------------------------------------+
-| Sequence database                    | Uniprot reference proteomes                        |
+| Sequence database                    | UniProt reference proteomes                        |
 +--------------------------------------+----------------------------------------------------+
 | Significance threshold (E-value)     | |parameters.incE.default| for sequence matches;    |
 |                                      | |parameters.incdomE.default| for hit matches       |                              
@@ -155,6 +180,51 @@ jackhmmer
 +--------------------------------------+----------------------------------------------------+
 | Filter                               | Bias composition filtering on                      |
 +--------------------------------------+----------------------------------------------------+
+
+------------------
+Sequence databases
+------------------
+
+The sequence database field changes which target sequence database is searched.
+The default is UniProt references proteomes.
+This is one of the few parameters that is required by phmmer, hmmsearch or jackhmmer.
+
++-----------------+---------------------------------------+
+| Parameter name  | seqdb                                 |
++-----------------+---------------------------------------+
+| Description     | Sets the target sequence database     |
++-----------------+---------------------------------------+
+| Algorithm(s)    | phmmer, hmmsearch, jackhmmer          |
++-----------------+---------------------------------------+
+| Accepted values | uniprotrefprot, uniprotkb, swissprot, |
+|                 | pdb, rp15, rp35, rp55, rp75,          |
+|                 | ensemblgenomes, ensembl, qfo          |
++-----------------+---------------------------------------+
+| Default         | uniprotrefprot (see below)            |
++-----------------+---------------------------------------+
+| Required        | Yes                                   |
++-----------------+---------------------------------------+
+
+-------------
+HMM databases
+-------------
+
+This field indicates which profile HMM database the query should be searched against.
+
++-----------------+-------------------------------------------+
+| Parameter name  | hmmdb                                     |
++-----------------+-------------------------------------------+
+| Description     | Sets the target HMM database              |
++-----------------+-------------------------------------------+
+| Algorithm       | hmmscan                                   |
++-----------------+-------------------------------------------+
+| Accepted values | gene3d, pfam, tigrfam, superfamily, pirsf |
++-----------------+-------------------------------------------+
+| Default         | pfam                                      |
++-----------------+-------------------------------------------+
+| Required        | Yes                                       |
++-----------------+-------------------------------------------+
+
 
 --------------
 Batch Searches
