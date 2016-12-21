@@ -6,7 +6,7 @@ HMMER project
 -------------
 
 The HMMER project is a collaborative project between the HMMER algorithm
-developers, led by `Sean Eddy <eddylab.org>`_ at
+developers, led by `Sean Eddy <http://eddylab.org>`_ at
 `HHMI/Harvard University <https://www.hhmi.org>`_
 and the HMMER web service team, lead by
 `Rob Finn <https://www.ebi.ac.uk/about/people/rob-finn>`_
