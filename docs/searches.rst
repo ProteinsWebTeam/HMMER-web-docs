@@ -49,13 +49,19 @@ the parameters and values used in the default search for each algorithm:
 phmmer
 ++++++
 
-:Sequence database: uniprotrefprot
-:Significance threshold (E-value): |parameters.incE.default| for sequence matches,
- |parameters.incdomE.default| for hit matches
-:Reporting threshold (E-value): |parameters.E.default| for both sequences and hits
-:Gap penalties: open value is |parameters.popen.default|, extend value is |parameters.pextend.default|, scoring matrix is |parameters.mx.default|
-:Filter: Bias composition filtering on
-:Pfam search: Enabled, with gathering thresholds applied
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+| Sequence database                    | uniprotrefprot                                                                                                              |
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+| Significance threshold (E-value):    | |parameters.incE.default| for sequence matches, |parameters.incdomE.default| for hit matches                                |                            
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+| Reporting threshold (E-value)        | |parameters.E.default| for both sequences and hits                                                                          |
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+| Gap penalties                        | open value: |parameters.popen.default|; extend value: |parameters.pextend.default|; scoring matrix: |parameters.mx.default| |
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+| Filter                               | Bias composition filtering on                                                                                               |
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+| Pfam search                          | Enabled, with gathering thresholds applied                                                                                  |
++--------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 hmmscan
 +++++++
