@@ -11,9 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   about
    databases
+   searches
    algorithms
+   about
    help
 
 
