@@ -36,22 +36,33 @@ Sponsors
 
 HMMER is supported by
 
-.. image:: _static/images/embl_logo.png
-   :alt: EMBL-EBI
-   :target: http://www.embl.org
-
-EMBL is EMBL-EBI's parent organisation. It provides core funding for HMMER.
-
-.. image:: _static/images/hhmi_logo.jpg
-   :alt: HHMI
-   :target: http://www.hhmi.org
-
-The Howard Hughes Medical Institute supports the Eddy group.
-
-.. image:: _static/images/wt_logo.jpg
+.. |wt| image:: _static/images/wt_logo.jpg
    :alt: Wellcome Trust
    :target: http://www.wellcome.ac.uk
 
-As well as providing and maintaining the campus on which the EMBL-EBI is located,
-the Wellcome Trust also now provides funding for HMMER.
+.. |hhmi| image:: _static/images/hhmi_logo.jpg
+   :alt: Wellcome Trust
+   :target: http://www.wellcome.ac.uk
 
+
+.. |embl| image:: _static/images/embl_logo.png
+   :alt: EMBL-EBI
+   :target: http://www.embl.org
+
+|embl|: EMBL is EMBL-EBI's parent organisation. It provides core funding for HMMER
+
+|hhmi|: The Howard Hughes Medical Institute supports the Eddy group
+
+|wt|: As well as providing and maintaining the campus on which the EMBL-EBI is located, the Wellcome Trust also now provides funding for HMMER
+
+-----------
+How to cite
+-----------
+
+If you have used the HMMER website, please consider citing the following
+publication that describes this work:
+
+HMMER web server: 2015 update R.D. Finn, J. Clements, W. Arndt,
+B.L. Miller, T.J. Wheeler, F. Schreiber, A. Bateman and S.R. Eddy
+Nucleic Acids Research (2015) Web Server Issue 43:W30-W38.
+`10.1093/nar/gkv397 <https://nar.oxfordjournals.org/content/43/W1/W30.full.pdf>`_

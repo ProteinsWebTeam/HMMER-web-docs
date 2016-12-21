@@ -31,15 +31,3 @@ following:
 
 * Cryptogenomicon blog - more detailed discussions of HMMER related
   topics, including the website.
-
------------
-How to cite
------------
-
-If you have used the HMMER website, please consider citing the following
-publication that describes this work:
-
-HMMER web server: 2015 update R.D. Finn, J. Clements, W. Arndt,
-B.L. Miller, T.J. Wheeler, F. Schreiber, A. Bateman and S.R. Eddy
-Nucleic Acids Research (2015) Web Server Issue 43:W30-W38.
-`10.1093/nar/gkv397 <https://nar.oxfordjournals.org/content/43/W1/W30.full.pdf>`_
