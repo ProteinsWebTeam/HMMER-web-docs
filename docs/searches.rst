@@ -377,6 +377,32 @@ set server side.
 | Required        | No                            | No                             |
 +-----------------+-------------------------------+--------------------------------+
 
+
+Gathering thresholds
+++++++++++++++++++++
+
+Specific to hmmscan, the gathering threshold indicates to HMMER to use the
+sequence and hit thresholds defined in the HMM file to be searched. In
+the cases of `Pfam <http://pfam.xfam.org>`_ and
+`TIGRFAMs <http://www.jcvi.org/cgi-bin/tigrfams/index.cgi>`_
+these are set conservatively to ensure
+that there are no known false positives. Thus, if a query sequence scores
+with a bit score greater than or equal to the gathering thresholds, then
+that match can be treated with high confidence. This threshold is the
+default setting for hmmscan. If you are using the API, you can use the
+cut_ga parameter to signify that the gathering threshold should be used.
+
+Gene3D and Superfamily thresholds
++++++++++++++++++++++++++++++++++
+
+Both of these HMM databases apply sophisticated post-processing steps
+on the HMMER results to make the domain assignments and disentangle
+overlapping matches. Each database uses an internal E-value cut-off of
+0.0001 for a domain match and does not employ the use of HMM specific
+bit score thresholds. Thus, cut-off manipulation has been disabled for
+these databases, thereby faithfully replicating the results of these
+HMM databases.
+
 --------------
 Batch Searches
 --------------
