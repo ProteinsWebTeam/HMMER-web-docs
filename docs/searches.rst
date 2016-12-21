@@ -39,7 +39,7 @@ Searches
 ========
 
 Four search types are supported: phmmer, hmmsearch, hmmscan and jackhmmer.
-.. See :ref:`HMMER algorithms` for more information.
+See :ref:`HMMER algorithms` for more information.
 
 ------------
 Search query
