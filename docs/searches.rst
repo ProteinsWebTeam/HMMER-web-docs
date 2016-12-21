@@ -38,6 +38,52 @@
 Searches
 ========
 
+Four search types are supported: phmmer, hmmsearch, hmmscan and jackhmmer.
+See :ref:`HMMER algorithms` for more information.
+
+----------
+Input data
+----------
+
+phmmer, hmmscan and jackhmmer searches take a single protein amino acid sequence
+as the input. The website
+accepts either `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ format or an amino acid sequence.
+Alternatively, you can query by sequence accession or identifier
+which will offer suggestions as the
+name is typed.
+
+hmmsearch and jackhmmer searches can take either a multiple protein sequence alignment
+as an input or a profile HMM. The alignment formats currently accepted are:
+
+* Aligned FASTA
+* Clustal (and Clustal-like)
+* PSI-BLAST
+* PHYLIP
+* Selex
+* GCG/MSF
+* STOCKHOLM format
+* UC Santa Cruz A2M (alignment to model)
+
+Profile HMMs can be
+entered as text-format via the website or via the seq parameter or
+better via a file and using the file parameter when using the API.
+Alternatively, it is also possible to retrieve HMMs from one of the five
+supported HMM databases (Pfam, TIGRFAM, Gene3D, Superfamily and Pirsf) by using
+the accession/identifier look up, similar to the sequence look up
+described in the previous section. If you want to restrict the look up
+to one particular HMM database, append @ followed by the database name
+(all lower case) e.g. CBS@pfam.
+
+--------------
+Input examples
+--------------
+
+For each of the search algorithms, examples sequences/alignments are provided
+(click on the 'example' button).
+These examples have been chosen to
+show a result set that demonstrates the various features available on
+the results pages.
+
 -------------------------
 Default search parameters
 -------------------------
@@ -72,7 +118,7 @@ hmmscan
 +--------------------------------------+----------------------------------------------------+
 | HMM database                         | Pfam                                               |
 +--------------------------------------+----------------------------------------------------+
-| Significance threshold               | The Pfam defined thresholds (gathering thresholds) |
+| Significance threshold               | The Pfam gathering thresholds                      |
 |                                      | are used to determine hit significance             |
 +--------------------------------------+----------------------------------------------------+
 | Filter                               | Bias composition filtering on                      |
