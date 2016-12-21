@@ -194,7 +194,7 @@ This is one of the few parameters that is required by phmmer, hmmsearch or jackh
 +-----------------+---------------------------------------+
 | Description     | Sets the target sequence database     |
 +-----------------+---------------------------------------+
-| Algorithm(s)    | phmmer, hmmsearch, jackhmmer          |
+| Algorithm       | phmmer, hmmsearch, jackhmmer          |
 +-----------------+---------------------------------------+
 | Accepted values | uniprotrefprot, uniprotkb, swissprot, |
 |                 | pdb, rp15, rp35, rp55, rp75,          |
@@ -225,6 +225,97 @@ This field indicates which profile HMM database the query should be searched aga
 | Required        | Yes                                       |
 +-----------------+-------------------------------------------+
 
+----------
+Thresholds
+----------
+
+All four algorithms have the ability to set two different categories
+of cut-offs: **significance** and **reporting** thresholds. These cut-offs can
+be defined either as E-values (the default option) or bit scores. When
+setting either category of threshold, there are two values for each of
+the threshold categories: **sequence** and **hit**. A query can match a target
+in multiple places, defined as a hit (or domain) score. The sum of all
+hits on the sequence is the sequence score.
+
+For example, trying to match repeating motifs can often be difficult,
+due to sequence variation in the repeating sequence motif. However, it
+can be possible to capture all examples of the motif, by relaxing the
+hit parameter while maintaining a stringent sequence parameter. This
+means that multiple matches, even if they are not strong matches, can
+be detected, but the sum of these matches must be sufficient to achieve
+the sequence score, there by limiting the rate of false positives.
+
+
+Significance Thresholds
++++++++++++++++++++++++
+
+Significance (or inclusion) thresholds are stricter than reporting thresholds and
+take precedence over them. These determine whether a sequence/hit is significant or not.
+
+Significance E-values
+^^^^^^^^^^^^^^^^^^^^^
+
+Sequence and hit significance E-value thresholds will set matches with
+E-values less than or equal to the cut-off E-value as being significant.
+The default sequence E-value threshold is
+|parameters.incE.default| and |parameters.incdomE.default| for hits. If using the
+API, the incE and incdomE parameters are used to set the sequence and
+hit E-value thresholds respectively. In the absence of any threshold
+parameters the server will default to using E-value thresholds with the
+defaults.
+
+Alternatively, the sequence and hit significance thresholds can be
+specified as bit scores. Any sequence or hit scoring greater than or
+equal to that given threshold will be considered a significant hit. By
+default, the form on the website is filled with typical values (defaults below).
+If using
+the API, the incT and incdomT parameters are used to set
+the sequence and hit bit thresholds respectively. This threshold is not
+used by default. If only one of these two parameters is set, then the
+unassigned parameter is set to the other assigned parameter value.
+
++-----------------+-----------------------------+--------------------------------+
+| Parameter name  | incE                        | incdomE                        |
++-----------------+-----------------------------+--------------------------------+
+| Description     | Sequence E-value threshold  | Hit E-value threshold          |
++-----------------+-----------------------------+--------------------------------+
+| Algorithm       | phmmer, hmmscan, hmmsearch, jackhmmer                        |
++-----------------+-----------------------------+--------------------------------+
+| Accepted values | |parameters.incE.min| < x   | |parameters.incdomE.max| < x   |
+|                 | ≤ |parameters.incE.max|     | ≤ |parameters.incdomE.max|     |
++-----------------+-----------------------------+--------------------------------+
+| Default         | |parameters.incE.default|   | |parameters.incdomE.default|   |
+|                 | or set to hit threshold,    | or set to hit threshold,       |
+|                 | if present                  | if present                     |
++-----------------+-----------------------------+--------------------------------+
+| Required        | No                          | No                             |
++-----------------+-----------------------------+--------------------------------+
+
+Significance bit scores
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Alternatively, the sequence and hit significance thresholds can be
+specified as bit scores. Any sequence or hit scoring greater than or
+equal to that given threshold will be considered a significant hit. By
+default, the form on the website is filled with typical values (defaults below).
+If using the API, the incT and incdomT parameters are used to set
+the sequence and hit bit thresholds respectively. This threshold is not
+used by default. If only one of these two parameters is set, then the
+unassigned parameter is set to the other assigned parameter value.
+
++-----------------+------------------------------+--------------------------------+
+| Parameter name  | incT                         | incdomT                        |
++-----------------+------------------------------+--------------------------------+
+| Description     | Sequence bit score threshold | Hit bit score threshold        |
++-----------------+------------------------------+--------------------------------+
+| Algorithm       | phmmer, hmmscan, hmmsearch, jackhmmer                         |
++-----------------+------------------------------+--------------------------------+
+| Accepted values | x > |parameters.incT.min|    | x > |parameters.incdomT.min|   |
++-----------------+------------------------------+--------------------------------+
+| Default         | |parameters.incT.default|    | |parameters.incdomT.default|   |
++-----------------+------------------------------+--------------------------------+
+| Required        | No                           | No                             |
++-----------------+------------------------------+--------------------------------+
 
 --------------
 Batch Searches
