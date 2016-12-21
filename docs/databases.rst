@@ -10,7 +10,7 @@ Sequence databases
 
 * Large, comprehensive sequence collection
 
-  - `UniprotKB <http://www.uniprot.org>`_ - Comprehensive resource for protein sequence and annotation
+  - `UniProtKB <http://www.uniprot.org>`_ - Comprehensive resource for protein sequence and annotation
     data produced by the Universal Protein Resource consortium.
 
 * Annotated sequences and determined 3D structures

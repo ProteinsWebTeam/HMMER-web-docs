@@ -256,9 +256,8 @@ Significance E-values
 ^^^^^^^^^^^^^^^^^^^^^
 
 Sequence and hit significance E-value thresholds will set matches with
-E-values less than or equal to the cut-off E-value as being significant.
-The default sequence E-value threshold is
-|parameters.incE.default| and |parameters.incdomE.default| for hits. If using the
+E-values less than or equal to the cut-off E-value as being significant (defaults
+below). If using the
 API, the incE and incdomE parameters are used to set the sequence and
 hit E-value thresholds respectively. In the absence of any threshold
 parameters the server will default to using E-value thresholds with the
@@ -274,22 +273,22 @@ the sequence and hit bit thresholds respectively. This threshold is not
 used by default. If only one of these two parameters is set, then the
 unassigned parameter is set to the other assigned parameter value.
 
-+-----------------+-----------------------------+--------------------------------+
-| Parameter name  | incE                        | incdomE                        |
-+-----------------+-----------------------------+--------------------------------+
-| Description     | Sequence E-value threshold  | Hit E-value threshold          |
-+-----------------+-----------------------------+--------------------------------+
-| Algorithm       | phmmer, hmmscan, hmmsearch, jackhmmer                        |
-+-----------------+-----------------------------+--------------------------------+
-| Accepted values | |parameters.incE.min| < x   | |parameters.incdomE.max| < x   |
-|                 | ≤ |parameters.incE.max|     | ≤ |parameters.incdomE.max|     |
-+-----------------+-----------------------------+--------------------------------+
-| Default         | |parameters.incE.default|   | |parameters.incdomE.default|   |
-|                 | or set to hit threshold,    | or set to hit threshold,       |
-|                 | if present                  | if present                     |
-+-----------------+-----------------------------+--------------------------------+
-| Required        | No                          | No                             |
-+-----------------+-----------------------------+--------------------------------+
++-----------------+-------------------------------+--------------------------------+
+| Parameter name  | incE                          | incdomE                        |
++-----------------+-------------------------------+--------------------------------+
+| Description     | Sequence E-value threshold    | Hit E-value threshold          |
++-----------------+-------------------------------+--------------------------------+
+| Algorithm       | phmmer, hmmscan, hmmsearch, jackhmmer                          |
++-----------------+-------------------------------+--------------------------------+
+| Accepted values | |parameters.incE.min| < x     | |parameters.incdomE.max| < x   |
+|                 | ≤ |parameters.incE.max|       | ≤ |parameters.incdomE.max|     |
++-----------------+-------------------------------+--------------------------------+
+| Default         | |parameters.incE.default|     | |parameters.incdomE.default|   |
+|                 | or set to sequence threshold, | or set to hit threshold,       |
+|                 | if present                    | if present                     |
++-----------------+-------------------------------+--------------------------------+
+| Required        | No                            | No                             |
++-----------------+-------------------------------+--------------------------------+
 
 Significance bit scores
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -316,6 +315,67 @@ unassigned parameter is set to the other assigned parameter value.
 +-----------------+------------------------------+--------------------------------+
 | Required        | No                           | No                             |
 +-----------------+------------------------------+--------------------------------+
+
+Reporting thresholds
+++++++++++++++++++++
+
+The reporting thresholds controls how many matches that fall below the
+significance threshold are still shown in the results (i.e. reported). As
+every entity in the target database is compared to the query, if
+all matches were reported, then potentially vast outputs would be
+generated. However, it can often be useful to view border-line matches
+as they may reveal more distant **potential** informative similarities to
+the model. As with the significance thresholds, there is a value for
+both the sequence and the hit, which again can be defined as either an
+E-value or a bit score. Such reported matches are indicated by a yellow
+background in the results table produced in the website.
+
+Reporting E-values
+^^^^^^^^^^^^^^^^^^
+
++-----------------+-------------------------------+--------------------------------+
+| Parameter name  | E                             | domE                           |
++-----------------+-------------------------------+--------------------------------+
+| Description     | Sequence E-value threshold    | Hit E-value threshold          |
+|                 | (reporting)                   | (reporting)                    |
++-----------------+-------------------------------+--------------------------------+
+| Algorithm       | phmmer, hmmscan, hmmsearch, jackhmmer                          |
++-----------------+-------------------------------+--------------------------------+
+| Accepted values | |parameters.E.min| < x        | |parameters.domE.max| < x      |
+|                 | ≤ |parameters.E.max|          | ≤ |parameters.domE.max|        |
++-----------------+-------------------------------+--------------------------------+
+| Default         | |parameters.E.default|        | |parameters.domE.default|      |
+|                 | or set to sequence threshold, | or set to hit threshold,       |
+|                 | if present                    | if present                     |
++-----------------+-------------------------------+--------------------------------+
+| Required        | No                            | No                             |
++-----------------+-------------------------------+--------------------------------+
+
+Reporting bit scores
+^^^^^^^^^^^^^^^^^^^^
+
+The sequence and hit reporting thresholds can also be specified as
+bit scores. Any sequence or hit scoring greater than or equal to that
+given threshold will be reported (defaults below). If using the API, the T
+and domT parameters are used to set the sequence and hit bit thresholds
+respectively. If significance thresholds are set, yet either or both
+reporting thresholds are undefined, these default form values will be
+set server side.
+
++-----------------+-------------------------------+--------------------------------+
+| Parameter name  | T                             | domT                           |
++-----------------+-------------------------------+--------------------------------+
+| Description     | Sequence E-value threshold    | Hit E-value threshold          |
+|                 | (reporting)                   | (reporting)                    |
++-----------------+-------------------------------+--------------------------------+
+| Algorithm       | phmmer, hmmscan, hmmsearch, jackhmmer                          |
++-----------------+-------------------------------+--------------------------------+
+| Accepted values | x > |parameters.T.min|        | x > |parameters.domT.min|      |
++-----------------+-------------------------------+--------------------------------+
+| Default         | |parameters.T.default|        | |parameters.domT.default|      |
++-----------------+-------------------------------+--------------------------------+
+| Required        | No                            | No                             |
++-----------------+-------------------------------+--------------------------------+
 
 --------------
 Batch Searches
