@@ -34,6 +34,58 @@
 .. |parameters.file.size| replace:: 3000000
 .. |parameters.file.minNumResidueTypes| replace:: 5
 
+========
+Searches
+========
+
+-------------------------
+Default search parameters
+-------------------------
+
+The searches on the website, when used in the simple mode, hide most of
+the search parameters and default values are used. Below is a list of
+the parameters and values used in the default search for each algorithm:
+
+phmmer
+++++++
+
+:Sequence database: uniprotrefprot
+:Significance threshold (E-value): |parameters.incE.default| for sequence matches,
+ |parameters.incdomE.default| for hit matches
+:Reporting threshold (E-value): |parameters.E.default| for both sequences and hits
+:Gap penalties: open value is |parameters.popen.default|, extend value is |parameters.pextend.default|, scoring matrix is |parameters.mx.default|
+:Filter: Bias composition filtering on
+:Pfam search: Enabled, with gathering thresholds applied
+
+hmmscan
++++++++
+
+:HMM database: Pfam (the Pfam defined thresholds (gathering thresholds) are used to determine hit significance)
+:Filter: Bias composition filtering on
+
+hmmsearch
++++++++++
+
+:Sequence database: uniprotrefprot
+:Significance threshold (E-value): |parameters.incE.default|
+ for sequence matches, |parameters.incdomE.default| for hit
+ matches
+:Reporting threshold (E-value): |parameters.E.default| for
+ both sequences and hits
+:Filter: Bias composition filtering on
+
+jackhmmer
++++++++++
+
+:Sequence database: uniprotrefprot
+:Significance threshold (E-value): |parameters.incE.default|
+ for sequence matches, |parameters.incdomE.default| for hit matches
+:Reporting threshold (E-value): |parameters.E.default| for
+ both sequences and hits
+:Gap penalties (if search initiated with a single sequence): open value
+ is |parameters.popen.default|, extend value is |parameters.pextend.default|, scoring matrix is |parameters.mx.default|
+:Filter: Bias composition filtering on
+
 --------------
 Batch Searches
 --------------
@@ -42,8 +94,8 @@ It is also possible to search multiple protein sequences in 'offline'
 batch mode. With both **phmmer** and **hmmscan**, files
 containing sequences in FASTA format can be uploaded via the
 "Upload a file" link. These sequences will then be searched, in turn,
-against the specified databases. Note that there is a limit of 500
-sequences per batch request. This is to prevent overload of the servers, but multiple
+against the specified databases. There is a limit of 500
+sequences per batch request. This is only to prevent overload of the servers: multiple
 batch requests are permitted.
 Once the job is
 submitted, a different results page will be returned, showing a
