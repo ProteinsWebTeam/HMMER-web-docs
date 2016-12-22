@@ -38,47 +38,50 @@
 Searches
 ========
 
-Four search types are supported: **phmmer**, **hmmsearch**, **hmmscan** and **jackhmmer**.
-See :ref:`HMMER algorithms` for more information.
+Four search types are supported: **phmmer**, **hmmsearch**, **hmmscan**
+and **jackhmmer**. See :ref:`HMMER algorithms` for more information.
 
-There are many different ways that a search on the website can be
-modified. Below is a list of the different accepted inputs and the
-parameters that can be modified. Also included are the parameter names
-that are required when using the API. This section is meant to be a
-guide to using the website, but further information can be found in the
-extensive `HMMER guide <http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf>`_.
-The parameter names used on the site are
-typically the same as the command line parameters, with the exception of
-the input data parameters. Each section is followed by a summary table
-that can be used as a quick reference.
+There are many different ways that a search on the website
+can be modified. Below is a list of the different accepted
+inputs and the parameters that can be modified. Also included
+are the parameter names that are required when using the
+API. This section is meant to be a guide to using the website,
+but further information can be found in the extensive `HMMER guide
+<http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf>`_.  The parameter
+names used on the site are typically the same as the command line
+parameters, with the exception of the input data parameters. Each section
+is followed by a summary table that can be used as a quick reference.
 
 ------------
 Search query
 ------------
 
-**phmmer**, **hmmscan** and jackhmmer searches take a **single protein amino acid sequence**
-as the input, controlled by the **seq** parameter. The website
-accepts either `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ format or an amino acid sequence.
-Alternatively, a sequence can be specified by **accession** or **identifier**. When using the website,
-suggestions will be offered as the
-name is typed.
+**phmmer**, **hmmscan** and jackhmmer searches take a **single
+protein amino acid sequence** as the input, controlled
+by the **seq** parameter. The website accepts either `FASTA
+<https://en.wikipedia.org/wiki/FASTA_format>`_ format or an amino acid
+sequence.  Alternatively, a sequence can be specified by **accession**
+or **identifier**. When using the website, suggestions will be offered
+as the name is typed.
 
-+-----------------+--------------------------+-------------------------------------------------------------+
-| Parameter name  | seq                      | acc                                                         |
-+-----------------+--------------------------+-------------------------------------------------------------+
-| Description     | Sets the query sequence                                                                |
-+-----------------+--------------------------+-------------------------------------------------------------+
-| Algorithm(s)    | phmmer, hmmscan, jackhmmer                                                             |
-+-----------------+--------------------------+-------------------------------------------------------------+
-| Accepted values | Protein sequence (FASTA) | Accession or identifier from one of the supported databases |
-+-----------------+--------------------------+-------------------------------------------------------------+
-| Default         | None                     |  None                                                       |
-+-----------------+--------------------------+-------------------------------------------------------------+
-| Required        |  Yes (seq or acc)                                                                      |
-+-----------------+--------------------------+-------------------------------------------------------------+
++-----------------+--------------------------+--------------------------------+
+| Parameter name  | seq                      | acc                            |
++-----------------+--------------------------+--------------------------------+
+| Description     | Sets the query sequence                                   |
++-----------------+--------------------------+--------------------------------+
+| Algorithm(s)    | phmmer, hmmscan, jackhmmer                                |
++-----------------+--------------------------+--------------------------------+
+| Accepted values | Protein sequence (FASTA) | Accession or identifier from   |
+|                 |                          | one of the supported databases |
++-----------------+--------------------------+--------------------------------+
+| Default         | None                     |  None                          |
++-----------------+--------------------------+--------------------------------+
+| Required        | Yes (seq or acc)                                          |
++-----------------+--------------------------+--------------------------------+
 
-**hmmsearch** and **jackhmmer** searches can take either a multiple protein sequence alignment
-as an input or a profile HMM. The alignment formats currently accepted are:
+**hmmsearch** and **jackhmmer** searches can take either a multiple
+protein sequence alignment as an input or a profile HMM. The alignment
+formats currently accepted are:
 
 * Aligned FASTA
 * Clustal (and Clustal-like)
@@ -89,25 +92,23 @@ as an input or a profile HMM. The alignment formats currently accepted are:
 * `STOCKHOLM <https://en.wikipedia.org/wiki/Stockholm_format>`_ format
 * UC Santa Cruz A2M (alignment to model)
 
-The algorithms **hmmsearch** and **jackhmmer** also permit searches to be initiated with a profile HMM.
-This can be entered as text via the website, or via the seq or file parameters
-when using the API.
+The algorithms **hmmsearch** and **jackhmmer** also permit searches
+to be initiated with a profile HMM.  This can be entered as text via
+the website, or via the seq or file parameters when using the API.
 Alternatively, it is also possible to retrieve HMMs from one of the
-supported HMM databases using
-the accession/identifier look up (in a similar manner to the sequence look up
-described earlier). To restrict the look up
-to one particular HMM database, append "@" followed by the database name
-(all lower case) e.g. CBS\@pfam.
+supported HMM databases using the accession/identifier look up (in a
+similar manner to the sequence look up described earlier). To restrict
+the look up to one particular HMM database, append "@" followed by the
+database name (all lower case) e.g. CBS\@pfam.
 
 --------------
 Query examples
 --------------
 
-For each of the search algorithms, examples sequences/alignments are provided
-(click on the 'example' button).
-These examples have been chosen to
-show a result set that demonstrates the various features available on
-the results pages.
+For each of the search algorithms, examples sequences/alignments are
+provided (click on the 'example' button).  These examples have been
+chosen to show a result set that demonstrates the various features
+available on the results pages.
 
 -------------------------
 Default search parameters
@@ -120,34 +121,37 @@ the parameters and values used in the default search for each algorithm:
 phmmer
 ++++++
 
-+--------------------------------------+----------------------------------------------------+
-| Sequence database                    | UniProt reference proteomes                        |
-+--------------------------------------+----------------------------------------------------+
-| Significance threshold (E-value)     | |parameters.incE.default| for sequence matches;    |
-|                                      | |parameters.incdomE.default| for hit matches       |                              
-+--------------------------------------+----------------------------------------------------+
-| Reporting threshold (E-value)        | |parameters.E.default| for both sequences and hits |
-+--------------------------------------+----------------------------------------------------+
-| Gap penalties                        | open value: |parameters.popen.default|;            |
-|                                      | extend value: |parameters.pextend.default|;        |
-|                                      | scoring matrix: |parameters.mx.default|            |
-+--------------------------------------+----------------------------------------------------+
-| Filter                               | Bias composition filtering on                      |
-+--------------------------------------+----------------------------------------------------+
-| Pfam search                          | Enabled, with gathering thresholds applied         |
-+--------------------------------------+----------------------------------------------------+
++--------------------------------------+--------------------------------------------+
+| Sequence database                    | UniProt reference proteomes                |
++--------------------------------------+--------------------------------------------+
+| Significance threshold (E-value)     | |parameters.incE.default|                  |
+|                                      | for sequence matches;                      |
+|                                      | |parameters.incdomE.default|               |
+|                                      | for hit matches                            |
++--------------------------------------+--------------------------------------------+
+| Reporting threshold (E-value)        | |parameters.E.default|                     |
+|                                      | for both sequences and hits                |
++--------------------------------------+--------------------------------------------+
+| Gap penalties                        | open: |parameters.popen.default|;          |
+|                                      | extend: |parameters.pextend.default|;      |
+|                                      | scoring matrix: |parameters.mx.default|    |
++--------------------------------------+--------------------------------------------+
+| Filter                               | Bias composition filtering on              |
++--------------------------------------+--------------------------------------------+
+| Pfam search                          | Enabled, with gathering thresholds applied |
++--------------------------------------+--------------------------------------------+
 
 hmmscan
 +++++++
 
-+--------------------------------------+----------------------------------------------------+
-| HMM database                         | Pfam                                               |
-+--------------------------------------+----------------------------------------------------+
-| Significance threshold               | The Pfam gathering thresholds                      |
-|                                      | are used to determine hit significance             |
-+--------------------------------------+----------------------------------------------------+
-| Filter                               | Bias composition filtering on                      |
-+--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------+
+| HMM database                         | Pfam                                   |
++--------------------------------------+----------------------------------------+
+| Significance threshold               | The Pfam gathering thresholds          |
+|                                      | are used to determine hit significance |
++--------------------------------------+----------------------------------------+
+| Filter                               | Bias composition filtering on          |
++--------------------------------------+----------------------------------------+
 
 hmmsearch
 +++++++++
@@ -156,7 +160,7 @@ hmmsearch
 | Sequence database                    | UniProt reference proteomes                        |
 +--------------------------------------+----------------------------------------------------+
 | Significance threshold (E-value)     | |parameters.incE.default| for sequence matches,    |
-|                                      | |parameters.incdomE.default| for hit matches       |                            
+|                                      | |parameters.incdomE.default| for hit matches       |
 +--------------------------------------+----------------------------------------------------+
 | Reporting threshold (E-value)        | |parameters.E.default| for both sequences and hits |
 +--------------------------------------+----------------------------------------------------+
@@ -170,12 +174,12 @@ jackhmmer
 | Sequence database                    | UniProt reference proteomes                        |
 +--------------------------------------+----------------------------------------------------+
 | Significance threshold (E-value)     | |parameters.incE.default| for sequence matches;    |
-|                                      | |parameters.incdomE.default| for hit matches       |                              
+|                                      | |parameters.incdomE.default| for hit matches       |
 +--------------------------------------+----------------------------------------------------+
 | Reporting threshold (E-value)        | |parameters.E.default| for both sequences and hits |
 +--------------------------------------+----------------------------------------------------+
-| Gap penalties                        | open value: |parameters.popen.default|;            |
-|                                      | extend value: |parameters.pextend.default|;        |
+| Gap penalties                        | open: |parameters.popen.default|;                  |
+|                                      | extend: |parameters.pextend.default|;              |
 |                                      | scoring matrix: |parameters.mx.default|            |
 +--------------------------------------+----------------------------------------------------+
 | Filter                               | Bias composition filtering on                      |
@@ -188,9 +192,9 @@ Databases
 Sequence databases
 ++++++++++++++++++
 
-The sequence database field changes which target sequence database is searched.
-The default is UniProt references proteomes.
-This is one of the few parameters that is required by phmmer, hmmsearch or jackhmmer.
+The sequence database field changes which target sequence database is
+searched. The default is UniProt references proteomes. This is one of
+the few parameters that is required by phmmer, hmmsearch or jackhmmer.
 
 +-----------------+---------------------------------------+
 | Parameter name  | seqdb                                 |
@@ -211,7 +215,8 @@ This is one of the few parameters that is required by phmmer, hmmsearch or jackh
 HMM databases
 +++++++++++++
 
-This field indicates which profile HMM database the query should be searched against.
+This field indicates which profile HMM database the query should be
+searched against.
 
 +-----------------+-------------------------------------------+
 | Parameter name  | hmmdb                                     |
@@ -231,13 +236,13 @@ This field indicates which profile HMM database the query should be searched aga
 Thresholds
 ----------
 
-All four algorithms have the ability to set two different categories
-of cut-offs: **significance** and **reporting** thresholds. These cut-offs can
-be defined either as E-values (the default option) or bit scores. When
+All four algorithms have the ability to set two different categories of
+cut-offs: **significance** and **reporting** thresholds. These cut-offs
+can be defined either as E-values (the default option) or bit scores. When
 setting either category of threshold, there are two values for each of
-the threshold categories: **sequence** and **hit**. A query can match a target
-in multiple places, defined as a hit (or domain) score. The sum of all
-hits on the sequence is the sequence score.
+the threshold categories: **sequence** and **hit**. A query can match a
+target in multiple places, defined as a hit (or domain) score. The sum
+of all hits on the sequence is the sequence score.
 
 For example, trying to match repeating motifs can often be difficult,
 due to sequence variation in the repeating sequence motif. However, it
@@ -248,30 +253,30 @@ be detected, but the sum of these matches must be sufficient to achieve
 the sequence score, there by limiting the rate of false positives.
 
 
-Significance Thresholds
+Significance thresholds
 +++++++++++++++++++++++
 
-Significance (or inclusion) thresholds are stricter than reporting thresholds and
-take precedence over them. These determine whether a sequence/hit is significant or not.
+Significance (or inclusion) thresholds are stricter than reporting
+thresholds and take precedence over them. These determine whether a
+sequence/hit is significant or not.
 
 Significance E-values
 ^^^^^^^^^^^^^^^^^^^^^
 
 Sequence and hit significance E-value thresholds will set matches with
-E-values less than or equal to the cut-off E-value as being significant (defaults
-below). If using the
-API, the incE and incdomE parameters are used to set the sequence and
-hit E-value thresholds respectively. In the absence of any threshold
-parameters the server will default to using E-value thresholds with the
+E-values less than or equal to the cut-off E-value as being significant
+(defaults below). If using the API, the incE and incdomE parameters are
+used to set the sequence and hit E-value thresholds respectively. In
+the absence of any threshold parameters the server will default to using
+E-value thresholds with the
 defaults.
 
 Alternatively, the sequence and hit significance thresholds can be
-specified as bit scores. Any sequence or hit scoring greater than or
-equal to that given threshold will be considered a significant hit. By
-default, the form on the website is filled with typical values (defaults below).
-If using
-the API, the incT and incdomT parameters are used to set
-the sequence and hit bit thresholds respectively. This threshold is not
+specified as bit scores. Any sequence or hit scoring greater than or equal
+to that given threshold will be considered a significant hit. By default,
+the form on the website is filled with typical values (defaults below).
+If using the API, the incT and incdomT parameters are used to set the
+sequence and hit bit thresholds respectively. This threshold is not
 used by default. If only one of these two parameters is set, then the
 unassigned parameter is set to the other assigned parameter value.
 
@@ -406,10 +411,10 @@ these databases, thereby faithfully replicating the results of these
 HMM databases.
 
 -----------------------
-Advanced saerch options 
+Advanced saerch options
 -----------------------
 
-Customisation of Results
+Customisation of results
 ++++++++++++++++++++++++
 
 The result table may be customised to display different columns and/or to
@@ -418,7 +423,7 @@ be performed before or after the search, with the customisation stored
 in a cookie so that you will not have to keep re-configuring the table
 after each search.
 
-Pfam Search
+Pfam search
 +++++++++++
 
 By default when performing a phmmer search via the website (and when
@@ -429,7 +434,7 @@ but can be mimicked by making separate requests to phmmer and hmmscan.
 Filters
 +++++++
 
-Bias Composition
+Bias composition
 ^^^^^^^^^^^^^^^^
 
 Turning off the bias composition filter can increases sensitivity,
@@ -452,34 +457,93 @@ This feature can be disabled using the nobias parameter.
 | Required        | No                                       |
 +-----------------+------------------------------------------+
 
+Gap penalties
++++++++++++++
+
+These are specific to phmmer and jackhmmer (initiated with a single sequence).
+
+Open
+^^^^
+
+The open parameter (called popen in HMMER) sets the probability for
+opening a gap in an alignment between target sequence against the model
+(or query sequence). The default value is |parameters.popen.default|,
+but can be set any value from |parameters.popen.min| (no gaps)
+to less than |parameters.popen.max|
+(more likely to extend the gap).
+
+Extend
+^^^^^^
+
+The extend parameter (called pextend in HMMER) sets the probability
+for extending the gap for a target sequence against the model or query
+sequence. The default value is |parameters.pextend.default|,
+but can be set anywhere from |parameters.pextend.min|
+(less likely to extend) to less than |parameters.pextend.max|
+(more likely to extend the gap).
+
+Scoring Matrix
+^^^^^^^^^^^^^^
+
+When using phmmer, the query is a single sequence so the residue alignment
+probabilities are calculated from a substitution matrix. Substitution
+matrices provide scores that indicate the likelihood of two aligned
+amino acids appearing due to conservation rather than by chance. There
+are five different matrices available for selection: BLOSUM45, BLOSUM62
+(default), BLOSUM90, PAM30 and PAM70. These BLOSUM matrices are based
+on observed alignments between amino acids in the BLOCKS database,
+where as the PAM matrices have been extrapolated from comparisons of
+closely related proteins. The different matrices alter the stringency
+of the alignment e.g. PAM90 can be used to find more distantly related
+sequences than PAM70, as PAM70 is more stringent; BLOSUM62 can be used
+to find more closely related sequence than using BLOSUM45, as BLOSUM45
+is less stringent.
+
+This is required for phmmer and jackhmmer and default values will be used
+if no value is set.
+
++-----------------+----------------------------+------------------------------+-------------------------+
+| Parameter name  | popen                      | pextend                      | mx                      |
++-----------------+----------------------------+------------------------------+-------------------------+
+| Description     | Gap open penalty           | Gap extend penalty           | Substitution matrix     |
++-----------------+----------------------------+------------------------------+-------------------------+
+| Algorithm(s)    | phmmer, jackhmmer                                                                   |
++-----------------+----------------------------+------------------------------+-------------------------+
+| Accepted values | |parameters.popen.min|     | |parameters.pextend.min|     | BLOSUM45, BLOSUM62,     |
+|                 | ≤ x <                      | ≤ x <                        | BLOSUM90, PAM30, PAM70  |
+|                 | |parameters.popen.max|     | |parameters.pextend.max|     |                         |
++-----------------+----------------------------+------------------------------+-------------------------+
+| Default         | |parameters.popen.default| | |parameters.pextend.default| | |parameters.mx.default| |
++-----------------+----------------------------+------------------------------+-------------------------+
+| Required        |  No                                                                                 |
++-----------------+----------------------------+--------------------------------------------------------+
+
 --------------
-Batch Searches
+Batch searches
 --------------
 
 It is also possible to search multiple protein sequences in 'offline'
-batch mode. With both **phmmer** and **hmmscan**, files
-containing sequences in FASTA format can be uploaded via the
-"Upload a file" link. These sequences will then be searched, in turn,
-against the specified databases. There is a limit of 500
-sequences per batch request. This is only to prevent overload of the servers: multiple
-batch requests are permitted.
-Once the job is
-submitted, a different results page will be returned, showing a
-table with each row in that table representing a sequence in your file.
-This table periodically updates, indicating the progress of your batch
-job. As results appear in the table, you can view the details. If you
-have many sequences, you can also request that an e-mail be sent when
-the batch job has completed.
+batch mode. With both **phmmer** and **hmmscan**, files containing
+sequences in FASTA format can be uploaded via the "Upload a file"
+link. These sequences will then be searched, in turn, against the
+specified databases. There is a limit of 500 sequences per batch
+request. This is only to prevent overload of the servers: multiple batch
+requests are permitted.  Once the job is submitted, a different results
+page will be returned, showing a table with each row in that table
+representing a sequence in your file.  This table periodically updates,
+indicating the progress of your batch job. As results appear in the
+table, you can view the details. If you have many sequences, you can
+also request that an e-mail be sent when the batch job has completed.
 It is also possible to use **hmmsearch** in batch mode, again with a
 single multiple alignment or profile HMM.
 
 The **jackhmmer** batch system operates in a slightly different manner.
 Under the advance settings you can select the number of iterations to be
-performed and the batch mode will automaticaly run through each
-iteration (or until convergence), taking the results and using all the
-sequences scoring above the significance threholds to generate the input
-multiple sequnece alignment for the next round. Only one sequence,
-multiple sequence aligment or profile HMM can be submitted at a time.
+performed and the batch mode will automaticaly run through each iteration
+(or until convergence), taking the results and using all the sequences
+scoring above the significance threholds to generate the input multiple
+sequnece alignment for the next round. Only one sequence, multiple
+sequence aligment or profile HMM can be submitted at a time.
 
 The batch system also works via the API, except the seq parameter is
 substituted for the file parameter; the other parameters remain the
@@ -528,5 +592,5 @@ Profile HMM
   suitable for searching databases for remotely homologous sequences.
 
 STOCKHOLM format
-  `STOCKHOLM <https://en.wikipedia.org/wiki/Stockholm_format>`_ format is a multiple sequence alignment format supported by
-  HMMER.
+  `STOCKHOLM <https://en.wikipedia.org/wiki/Stockholm_format>`_ format
+  is a multiple sequence alignment format supported by HMMER.
