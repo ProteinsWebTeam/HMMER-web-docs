@@ -411,7 +411,7 @@ these databases, thereby faithfully replicating the results of these
 HMM databases.
 
 -----------------------
-Advanced saerch options
+Advanced search options
 -----------------------
 
 Customisation of results
