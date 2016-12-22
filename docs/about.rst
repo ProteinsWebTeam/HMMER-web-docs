@@ -10,7 +10,8 @@ developers, led by `Sean Eddy <http://eddylab.org>`_ at
 `HHMI/Harvard University <https://www.hhmi.org>`_
 and the HMMER web service team, lead by
 `Rob Finn <https://www.ebi.ac.uk/about/people/rob-finn>`_
-at `EMBL-EBI <https://www.ebi.ac.uk>`_.
+at `EMBL-EBI <https://www.ebi.ac.uk>`_. The HMMER software is available from
+`hmmer.org <http://hmmer.org>`_.
 
 While the HMMER algorithm developers focus on improving the speed and
 sensitivity of searches, the HMMER web service team takes these algorithms
