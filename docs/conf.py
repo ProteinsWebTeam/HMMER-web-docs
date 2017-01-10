@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'HMMER web server'
-copyright = u'2016, Simon Potter'
+copyright = u'2016, EMBL-EBI'
 author = u'Simon Potter'
 
 # The version info for the project you're documenting, acts as replacement for
