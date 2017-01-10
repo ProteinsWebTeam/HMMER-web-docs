@@ -59,7 +59,7 @@ Position line
 
 Query line
   the most probable sequence from the HMM that is coloured according to
-the match. In the case of a single sequence search, it is the query sequence.
+  the match. In the case of a single sequence search, it is the query sequence.
 
 Match line
   indicates identical residues (letters) or similar residues (+)
@@ -119,7 +119,7 @@ Bit score
   identical and similar residues (denoted by the + in the match state
   line) is used in the calculation.
 
-The are then two E-values for the domain:
+There are also two E-values for the domain:
 
 Conditional E-value
   This is the E-value that the inclusion and

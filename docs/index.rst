@@ -14,7 +14,7 @@ Contents:
    databases
    searches
    algorithms
+   result
    about
    help
-
-
+   faq
