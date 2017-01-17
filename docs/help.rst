@@ -23,7 +23,7 @@ The target databases are updated on a monthly basis. Additionally there will
 be bug fixes and new website features. To keep up to date with these, see one of the
 following:
 
-* Change log - lists new features, bug fixes and improvements made to the
+* :ref:`Changelog` - lists new features, bug fixes and improvements made to the
   site.
 
 * Twitter - follow hmm3r for micro-blogs about the HMMER software updates,

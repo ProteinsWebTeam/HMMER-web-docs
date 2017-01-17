@@ -20,3 +20,4 @@ Contents:
    help
    faq
    appendices
+   changes
