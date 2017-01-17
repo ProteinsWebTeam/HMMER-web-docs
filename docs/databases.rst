@@ -41,8 +41,11 @@ Sequence databases
 
 * Other
 
-  - `Ensembl Genomes <http://www.ensemblgenomes.org>`_ - Searches may be performed across the entire set or one
-    of the subsets:
+  - `Ensembl Genomes <http://www.ensemblgenomes.org>`_ - Ensembl Genomes is a
+    resource for genomic data for several thousands of invertebrate species.
+    All translations resulting from known and novel gene predictions in Ensembl Genomes,
+    including hypothetical proteins, are included. For lists of all the species
+    in each sub division within Ensembl Genomes please see
     `Bacteria <http://bacteria.ensembl.org/index.html>`_,
     `Fungi <http://fungi.ensembl.org/index.html>`_,
     `Metazoa <http://metazoa.ensembl.org/index.html>`_,
