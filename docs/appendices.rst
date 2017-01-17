@@ -262,7 +262,7 @@ text output is the best output if you want to cut and paste results into
 a lab book.
 
 ---------------------------------
-Appendix C - unsupported features
+Appendix D - unsupported features
 ---------------------------------
 
 We have tried to provide as many services as possible via REST. However,
