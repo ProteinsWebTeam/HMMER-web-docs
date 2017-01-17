@@ -419,7 +419,7 @@ By default, a search using hmmscan is run when running a phmmer search.
 This will indicate the presence of any known Pfam domains on your query
 sequence. As with Pfam, we present the hits graphically as shown below:
 
-.. image:: _static/images/domain_graphic.gif 
+.. image:: _static/images/domain_graphic.png 
    :alt: Domain graphic
 
 In this example, there are two domains on the sequence. The second
@@ -577,7 +577,7 @@ the different search algorithms:
 | STOCKHOLM  | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
 |            | returned in STOCKHOLM_         |           |           |           |           |         |
 |            | format. Useful if you wish to  |           |           |           |           |         |
-|            |  use your results with the     |           |           |           |           |         |
+|            | use your results with the      |           |           |           |           |         |
 |            | command line version of HMMER  |           |           |           |           |         |
 +------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
 | ClustalW   | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
