@@ -42,7 +42,7 @@ HMMER is supported by
    :target: http://www.wellcome.ac.uk
 
 .. |hhmi| image:: _static/images/hhmi_logo.jpg
-   :alt: Wellcome Trust
+   :alt: Howard Hughes Medical Institute
    :target: http://www.hhmi.org
 
 .. |embl| image:: _static/images/embl_logo.png
