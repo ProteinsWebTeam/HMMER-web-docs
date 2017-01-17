@@ -43,8 +43,7 @@ HMMER is supported by
 
 .. |hhmi| image:: _static/images/hhmi_logo.jpg
    :alt: Wellcome Trust
-   :target: http://www.wellcome.ac.uk
-
+   :target: http://www.hhmi.org
 
 .. |embl| image:: _static/images/embl_logo.png
    :alt: EMBL-EBI
