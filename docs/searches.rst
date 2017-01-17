@@ -410,12 +410,13 @@ bit score thresholds. Thus, cut-off manipulation has been disabled for
 these databases, thereby faithfully replicating the results of these
 HMM databases.
 
------------------------
+=======================
 Advanced search options
------------------------
+=======================
 
+------------------------
 Customisation of results
-++++++++++++++++++++++++
+------------------------
 
 The result table may be customised to display different columns and/or to
 restrict the number of rows in the table to a manageable number. This can
@@ -423,19 +424,21 @@ be performed before or after the search, with the customisation stored
 in a cookie so that you will not have to keep re-configuring the table
 after each search.
 
+-----------
 Pfam search
-+++++++++++
+-----------
 
 By default when performing a phmmer search via the website (and when
 JavaScript is enabled), a default hmmscan search against the Pfam HMM
 library is also performed. This feature is not available via the API,
 but can be mimicked by making separate requests to phmmer and hmmscan.
 
+-------
 Filters
-+++++++
+-------
 
 Bias composition
-^^^^^^^^^^^^^^^^
+++++++++++++++++
 
 Turning off the bias composition filter can increases sensitivity,
 but at a high cost in speed, especially if the query has biased residue
@@ -457,13 +460,14 @@ This feature can be disabled using the nobias parameter.
 | Required        | No                                       |
 +-----------------+------------------------------------------+
 
+-------------
 Gap penalties
-+++++++++++++
+-------------
 
 These are specific to phmmer and jackhmmer (initiated with a single sequence).
 
 Open
-^^^^
+++++
 
 The open parameter (called popen in HMMER) sets the probability for
 opening a gap in an alignment between target sequence against the model
@@ -473,7 +477,7 @@ to less than |parameters.popen.max|
 (more likely to extend the gap).
 
 Extend
-^^^^^^
+++++++
 
 The extend parameter (called pextend in HMMER) sets the probability
 for extending the gap for a target sequence against the model or query
@@ -483,7 +487,7 @@ but can be set anywhere from |parameters.pextend.min|
 (more likely to extend the gap).
 
 Scoring Matrix
-^^^^^^^^^^^^^^
+++++++++++++++
 
 When using phmmer, the query is a single sequence so the residue alignment
 probabilities are calculated from a substitution matrix. Substitution
