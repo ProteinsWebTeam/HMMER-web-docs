@@ -9,12 +9,14 @@ The HMMER web server
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    databases
    searches
    algorithms
    result
+   api
    about
    help
    faq
+   appendices
