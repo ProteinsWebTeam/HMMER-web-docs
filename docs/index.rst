@@ -13,10 +13,10 @@ Contents:
 
    databases
    searches
-   algorithms
    result
    api
    about
+   algorithms
    help
    faq
    appendices
