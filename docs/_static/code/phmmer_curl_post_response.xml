@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opt>
+  <data name='results' resultSize='224339'>
+    <_internal highbit='370.5' lowbit='19.0' numberSig='242' offset='42280'>
+      <timings search='0.283351' unpack='0.176821' />
+    </_internal>
+    <hits
+        name='2abl_A'
+        acc='2abl_A'
+        bias='0.1'
+        desc='mol:protein length:163  ABL TYROSINE KINASE'
+        evalue='1.1e-110'
+        ndom='1'
+        nincluded='1'
+        nregions='1'
+        reported='1'
+        score='370.5'
+        species='Homo sapiens'
+        taxid='9606' >
+            <domains
+                aliL='163'
+                aliM='163'
+                aliN='163'
+                aliaseq='MGPSENDPNLFVALYDFVASGDNTLSITKGEKLRVLGYNHNGEWCEAQTKNGQGWVPSNYITPVNSLEKHSWYHGPVSRNAAEYLLSSGINGSFLVRESESSPGQRSISLRYEGRVYHYRINTASDGKLYVSSESRFNTLAELVHHHSTVADGLITTLHYPAP'
+                alihmmfrom='1'
+                alihmmname='2abl_A'
+                alihmmto='163'
+                alimline='+gpsendpnlfvalydfvasgdntlsitkgeklrvlgynhngewceaqtkngqgwvpsnyitpvnslekhswyhgpvsrnaaeyllssgingsflvresesspgqrsislryegrvyhyrintasdgklyvssesrfntlaelvhhhstvadglittlhypap'
+                alimodel='lgpsendpnlfvalydfvasgdntlsitkgeklrvlgynhngewceaqtkngqgwvpsnyitpvnslekhswyhgpvsrnaaeyllssgingsflvresesspgqrsislryegrvyhyrintasdgklyvssesrfntlaelvhhhstvadglittlhypap'
+                alippline='8*****************************************************************************************************************************************************************9'
+                alisqacc='2abl_A'
+                alisqdesc='mol:protein length:163  ABL TYROSINE KINASE'
+                alisqfrom='1'
+                alisqname='2abl_A'
+                alisqto='163'
+                bias='0.05'
+                bitscore='370.357543945312'
+                envsc='250.653518676758'
+                cevalue='4.21e-121'
+                ievalue='4.21e-121'
+                                iali='1'
+                ienv='1'
+                is_included='1'
+                is_reported='1'
+                jali='163'
+                jenv='163'
+            />
+    </hits>
+    .
+    .
+    .
+  </data>
+</opt>
