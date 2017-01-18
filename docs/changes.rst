@@ -1,6 +1,19 @@
 Changelog
 =========
 
+**Version 2.9, January 2017**
+
+- Changes
+
+  - UniProt release 2017_01
+
+**Version 2.8, December 2016**
+
+- Changes
+
+  - Pfam active sites
+  - Ensembl
+
 **Version 2.7, September 2016**
 
 - Changes
