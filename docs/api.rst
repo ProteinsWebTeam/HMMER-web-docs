@@ -199,52 +199,43 @@ Example::
 
 This is one of the few services where the returned format can be modified using a parameter.
 
-+-----------+-----------------+-----------------+-------------+--------------------+--------------------------------+
-| Parameter | Description     | Accepted values | Example     | Default/Without    | Notes                          |
-|           |                 |                 |             | Parameter          |                                |
-+-----------+-----------------+-----------------+-------------+--------------------+--------------------------------+
-| range     | The range of    | Integer,Integer | range=1,100 | All results        | Results are ordered by E-value |
-|           | the results to  |                 |             |                    | and, as there can be thousands |
-|           | retrieve        |                 |             |                    | of matches to your query, it   |
-|           |                 |                 |             |                    | can be useful to retrieve a    |
-|           |                 |                 |             |                    | subset of results. The range   |
-|           |                 |                 |             |                    | is two, unsigned, comma        |
-|           |                 |                 |             |                    | separated integers; the first  |
-|           |                 |                 |             |                    | is expected to be less than    |
-|           |                 |                 |             |                    | the second. To retrieve one    |
-|           |                 |                 |             |                    | row, just fetch using a range  |
-|           |                 |                 |             |                    | where the two integers are the |
-|           |                 |                 |             |                    | same value. If your first      |
-|           |                 |                 |             |                    | integer is in range, and your  |
-|           |                 |                 |             |                    | second is out of range, the    |
-|           |                 |                 |             |                    | second integer will be         |
-|           |                 |                 |             |                    | modified to include all        |
-|           |                 |                 |             |                    | results. i.e. If your results  |
-|           |                 |                 |             |                    | set is only 300 in size, and a |
-|           |                 |                 |             |                    | range of 1,1000 is requested,  |
-|           |                 |                 |             |                    | then you will get 300 results. |
-|           |                 |                 |             |                    | If your starting integer is    |
-|           |                 |                 |             |                    | "out" of range, then no        |
-|           |                 |                 |             |                    | results will be returned.      |
-+-----------+-----------------+-----------------+-------------+--------------------+--------------------------------+
-| ali       | Return          | true | 1        | ali=1       | No alignments will | Sometimes you are not so       |
-|           | alignments.     |                 |             | be returned        | interested in the alignment of |
-|           |                 |                 |             |                    | the match to the query         |
-|           |                 |                 |             |                    | sequence. By default no        |
-|           |                 |                 |             |                    | alignments are returned, to    |
-|           |                 |                 |             |                    | keep results compact.          |
-+-----------+-----------------+-----------------+-------------+--------------------+--------------------------------+
-| output    | Modify the      | xml | json |    | html        | output=text        | The format of the results can  |
-|           | format that the | text | yaml     |             |                    | be modified with by setting    |
-|           | results are     |                 |             |                    | "output=FORMAT". The same can  |
-|           | returned in     |                 |             |                    | be achieved by setting the     |
-|           |                 |                 |             |                    | "Accept" field in the HTTP     |
-|           |                 |                 |             |                    | header. If both the HTTP       |
-|           |                 |                 |             |                    | header and the parameter are   |
-|           |                 |                 |             |                    | set, we currently assume that  |
-|           |                 |                 |             |                    | the parameter is the desired   |
-|           |                 |                 |             |                    | format.                        |
-+-----------+-----------------+-----------------+-------------+--------------------+--------------------------------+
++-------------------+-------------------------------+-------------------------------+-------------------------------+
+|**Parameter**      |range                          |ali                            |output                         |
++-------------------+-------------------------------+-------------------------------+-------------------------------+
+|**Description**    |The range of the results to    |Return alignments              |Modify the format that the     |
+|                   |retrieve                       |                               |results are returned in        |
++-------------------+-------------------------------+-------------------------------+-------------------------------+
+|**Accepted values**|Integer,Integer                |true | 1                       |xml | json | text | yaml       |
++-------------------+-------------------------------+-------------------------------+-------------------------------+
+|**Example**        |range=1,100                    |ali=1                          |html                           |
++-------------------+-------------------------------+-------------------------------+-------------------------------+
+|**Default/Without**|All results                    |No alignments will be returned |output=text                    |
+|**Parameter**      |                               |                               |                               |
++-------------------+-------------------------------+-------------------------------+-------------------------------+
+|**Notes**          |The results are ordered by     |Sometimes you are not so       |The format of the results can  |
+|                   |E-value and as there can be    |interested in the alignment of |be modified with by setting    |
+|                   |thousands of matches to your   |the match to the query         |“output=$format”. The same can |
+|                   |query, it can be useful to     |sequence. By default no        |be achieved by setting the     |
+|                   |retrieve a subset of results.  |alignments are returned, to    |“Accept” field in the HTTP     |
+|                   |The range is two, unsigned,    |keep results compact.          |header. If both the HTTP header|
+|                   |comma separated integers. The  |                               |and the parameter are set, we  |
+|                   |first integer is expected to be|                               |currently assume that the      |
+|                   |less than the second integer.  |                               |parameter is the desired       |
+|                   |To retrieve one row, just fetch|                               |format.                        |
+|                   |using a range where the two    |                               |                               |
+|                   |integers are the same value. If|                               |                               |
+|                   |your first integer is in range,|                               |                               |
+|                   |and your second is out of      |                               |                               |
+|                   |range, the second integer will |                               |                               |
+|                   |be modified to include all     |                               |                               |
+|                   |results. i.e. If your results  |                               |                               |
+|                   |set is only 300 in size, and a |                               |                               |
+|                   |range of 1,1000 is requested,  |                               |                               |
+|                   |then you will get 300 results. |                               |                               |
+|                   |If your starting integer is    |                               |                               |
+|                   |“out” of range, then no results|                               |                               |
+|                   |will be returned.              |                               |                               |
++-------------------+-------------------------------+-------------------------------+-------------------------------+
 
 Deleting results
 ^^^^^^^^^^^^^^^^
