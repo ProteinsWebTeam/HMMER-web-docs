@@ -123,6 +123,7 @@ todo_include_todos = False
 #
 def setup(app):
   app.add_stylesheet( "css/tab.css" )
+  app.add_stylesheet( "css/custom.css" )
 
 import sphinx_rtd_theme
 
