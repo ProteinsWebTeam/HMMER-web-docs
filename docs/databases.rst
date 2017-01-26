@@ -29,7 +29,7 @@ Sequence databases
     best represent all the proteomes in its group in terms of the majority
     of the sequence space and information. RPs at 75%, 55%, 35% and 15%
     co-membership threshold are available as target databases. More
-    information on Representative Proteomes can be found here. The data set
+    information on `Representative Proteomes <http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0018910>`_ is available. The data set
     also includes model organisms and viral reference proteomes as defined
     by UniProt. The complete proteomes database comes from PIR.
 
