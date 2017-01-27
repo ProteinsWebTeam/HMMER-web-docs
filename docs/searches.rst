@@ -414,6 +414,23 @@ HMM databases.
 Advanced search options
 =======================
 
+---------------------
+Taxonomy Restrictions
+---------------------
+
+Search
+++++++
+
+You can add for taxa from all taxonomic levels (e.g. Homo sapiens or Metazoa)
+to be included in your search.
+You can add several taxa.
+
+Pre-defined Taxonomic Tree
+++++++++++++++++++++++++++
+
+You can select different levels of a given taxonomic tree.
+All species within the selected levels will be included in your search.
+
 ------------------------
 Customisation of results
 ------------------------
