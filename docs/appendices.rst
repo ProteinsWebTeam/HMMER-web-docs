@@ -274,3 +274,12 @@ canvas element. The RESTful services are also, naturally, restricted to
 just the set of HMMER programs that are available via the website. But,
 if there is something that you think would be useful, then please get in
 touch and we will consider it for inclusion.
+
+-------------------
+Appendix E - Job ID
+-------------------
+
+The job ID, also refered to as UUID (Universally Unique IDentifier),
+is a 36 character sequence that looks like
+*10F15DB0-2E1C-11E0-B944-D59DDB6B6FDE* and that uniquely identifies a
+job submitted on the website.
