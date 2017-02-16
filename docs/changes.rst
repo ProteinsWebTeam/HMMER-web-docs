@@ -1,6 +1,16 @@
 Changelog
 =========
 
+**Version 2.10, February 2017**
+
+- Changes
+
+  - UniProt release 2017_02
+
+- Bug fixes
+
+  - Improved handling of HMM logos (some HMMs are unable to be rendered owing to the way they are constructed)
+
 **Version 2.9, January 2017**
 
 - Changes
