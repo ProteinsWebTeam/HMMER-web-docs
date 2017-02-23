@@ -465,13 +465,13 @@ query sequence. The `IUPred server <http://iupred.enzim.hu/>`_
 provides more detailed disorder
 prediction results than currently offered here.
 
-Bioinformatical approaches to characterize intrinsically
-disordered/unstructured proteins. Dosztányi Z., Mészáros B., Simon I.
-Brief Bioinform (2010) 11:225-43.
+| `Bioinformatical approaches to characterize intrinsically disordered/unstructured proteins. <https://europepmc.org/abstract/MED/20007729>`_
+|   Dosztányi Z., Mészáros B., Simon I.
+|   Briefings in Bioinformatics (2010) 11:225-43.
 
-IUPred: web server for the prediction of intrinsically unstructured
-regions of proteins based on estimated energy content. Dosztányi Z.,
-Csizmok V., Tompa P., Simon I. Bioinformatics (2005) 21:3433-3434.
+| `IUPred: web server for the prediction of intrinsically unstructured regions of proteins based on estimated energy content. <https://europepmc.org/abstract/MED/15955779>`_
+|   Dosztányi Z., Csizmok V., Tompa P., Simon I.
+|   Bioinformatics (2005) 21:3433-3434.
 
 Signal peptides and Transmembrane regions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -480,8 +480,9 @@ The Phoibus program is used to identify both signal peptides and
 transmembrane regions in the query sequence. The Phobius server provides
 more detailed prediction results than currently offered here.
 
-A combined transmembrane topology and signal peptide prediction method.
-Käll L., Krogh A., Sonnhammer E.L. J Mol Biol (2004) 338:1027-36.
+| `A combined transmembrane topology and signal peptide prediction method. <https://europepmc.org/abstract/MED/15111065>`_
+|   Käll L., Krogh A., Sonnhammer E.L.
+|   Journal of Molecular Biology (2004) 338:1027-36.
 
 Coiled-coil regions
 ^^^^^^^^^^^^^^^^^^^
@@ -489,8 +490,9 @@ Coiled-coil regions
 A derivative of Rob Russels ncoils program that was based on the Lupas
 et al. program for predicting coiled-coils in the query sequence.
 
-Predicting coiled coils from protein sequences. Lupas A., Van Dyke M.,
-Stock J. Science (1991) 252:1162-1164.
+| `Predicting coiled coils from protein sequences. <https://europepmc.org/abstract/MED/2031185>`_
+|   Lupas A., Van Dyke M., Stock J.
+|   Science (1991) 252:1162-1164.
 
 Note: When the above algorithms do not return any significant regions,
 the results are not drawn as part of the domain graphic.
