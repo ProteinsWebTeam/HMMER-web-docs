@@ -1,6 +1,16 @@
 Changelog
 =========
 
+**Version 2.11, March 2017**
+
+- Changes
+
+  - UniProt release 2017_03
+  - Pfam release 31.0
+  - MEROPS 11 added as a supported sequence database
+  - PIRSF: new post-processing enables the unification of two or more matches that are separated due to the HMMER3 local-local matching model
+  - (beta version) Added EBI Search cross-references in sequence database results
+
 **Version 2.10, February 2017**
 
 - Changes
