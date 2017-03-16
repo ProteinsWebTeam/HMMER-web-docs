@@ -59,6 +59,16 @@ Sequence databases
 
   - `Quest for Orthologs <http://questfororthologs.org>`_
 
+  - `MEROPS <http://merops.sanger.ac.uk>`_ -
+    a set of domain sequences from the MEROPS database of proteolytic
+    enzymes. For each peptidase in the collection, the sequence of
+    the known or predicted domain that carries the active site residues is
+    included. Homologues that are not proteolytically active because one or
+    more active site residues are missing or replaced are also included.
+    For each inhibitor, the sequence is that of each inhibitory domain.
+    Domains homologous to an inhibitory domain are also included, even if
+    no inhibitory activity is known.
+
 The default database is UniProt reference proteomes.
 
 ---------------------
