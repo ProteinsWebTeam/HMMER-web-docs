@@ -247,6 +247,9 @@ Species
   Shows the species to which this sequence belongs and provides a link to the
   `NCBI taxonomy Browser <http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi>`_
 
+Cross-refs
+  Displays cross-references to other resources available at the EBI through `EBI Search <https://www.ebi.ac.uk/ebisearch>`_.
+
 Kingdom
   Shows the kingdom to which this sequence belongs
 
