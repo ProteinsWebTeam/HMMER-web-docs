@@ -185,17 +185,17 @@ Example::
   curl -H 'Expect:' -H 'Accept:text/xml' http://www.ebi.ac.uk/Tools/hmmer/annotation/phobius/4162F712-1DD2-11B2-B17E-C09EFE1DC403
 
 Results
-^^^^^^^^^^^^^^^^
+^^^^^^^
 
 Search results can be retrieved using the job identifier that is returned in your initial search response.
 The job identifier is a UUID (format such as 4162F712-1DD2-11B2-B17E-C09EFE1DC403).
 Thus, to retrieve your job, you can use the following URL in a GET request::
 
-  http://www.ebi.ac.uk/Tools/hmmer/results/hmmscan/$your_uuid
+  http://www.ebi.ac.uk/Tools/hmmer/results/$your_uuid?output=html
 
 Example::
 
-  http://www.ebi.ac.uk/Tools/hmmer/results/hmmscan/4162F712-1DD2-11B2-B17E-C09EFE1DC403
+  http://www.ebi.ac.uk/Tools/hmmer/results/4162F712-1DD2-11B2-B17E-C09EFE1DC403?output=html
 
 This is one of the few services where the returned format can be modified using a parameter.
 
