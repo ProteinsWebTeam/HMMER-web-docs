@@ -52,7 +52,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'HMMER web server'
 copyright = u'2016, EMBL-EBI'
-author = u'Simon Potter'
+author = u'Rob Finn & Simon Potter'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -269,7 +269,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'HMMERwebserver.tex', u'HMMER web server Documentation',
-     u'Simon Potter', 'manual'),
+     u'Rob Finn \& Simon Potter\\\\EMBL-EBI', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
