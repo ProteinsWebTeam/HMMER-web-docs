@@ -1,6 +1,13 @@
 Changelog
 =========
 
+**Version 2.12**
+
+- Changes
+
+  - Website now follows EBI guidelines
+  - EBI Search cross-references added for all supported databases
+
 **Version 2.11, March 2017**
 
 - Changes
