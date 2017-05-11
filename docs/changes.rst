@@ -1,6 +1,15 @@
 Changelog
 =========
 
+**Version 2.13, May 2017**
+
+- Changes
+
+  - UniProt release 2017_05
+  - Ensembl Genomes release 35
+  - Ensembl release 88
+  - Gene3D post-processing now uses `cath-resolve-hits <http://cath-tools.readthedocs.io/en/latest/tools/cath-resolve-hits>`_
+
 **Version 2.12**
 
 - Changes
