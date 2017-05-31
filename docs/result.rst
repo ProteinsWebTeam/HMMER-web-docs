@@ -369,14 +369,12 @@ Database specific result fields
 Gene3D
 ......
 
-The table for Gene3D results is identical to the one described above,
-except for the addition of a column called "Region". These regions come
-from the post-processing that is applied, where inserts longer than 30
-are removed from the domain assignment that is performed by
-DomainFinder. DomainFinder goes through the list of domains, assigns a
-domain architecture based on a heaviest weighted clique-finding method.
-Only those domains assigned in the final architecture are displayed in
-the table.
+The table of Gene3D results shows a final architecture of domain
+hits. These are selected from the full list by
+`cath-resolve-hits <http://cath-tools.readthedocs.io/en/latest/tools/cath-resolve-hits>`_,
+which resolves candidate hits to a final architecture using a
+dynamic-programming algorithm. The table includes a column for the hits'
+regions, which include any gaps of 30 residues or more.
 
 .. image:: _static/images/gene3d.gif 
    :alt: Gene3D
