@@ -14,7 +14,7 @@ The following example POSTs the request to the server (our server configuration 
 
 .. code:: bash
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F algo=phmmer -F seq='<test.seq' http://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F algo=phmmer -F seq='<test.seq' https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
 
 .. literalinclude:: _static/code/phmmer_curl_post_response.xml
    :language: xml
@@ -76,11 +76,11 @@ default values for that parameter will be set.
 
 Searches should be POST-ed to the following url::
 
-  http://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+  https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
 
 Example::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F seq='<test.seq' http://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F seq='<test.seq' https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
 
 When using the website, we also perform a Pfam search by default. However,
 when using the API you will only be returned the phmmer results.
@@ -102,11 +102,11 @@ in addition to the hmmscan results.
 
 Searches should be POST-ed to the following url::
 
-  http://www.ebi.ac.uk/Tools/hmmer/search/hmmscan
+  https://www.ebi.ac.uk/Tools/hmmer/search/hmmscan
 
 Example::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' -F hmmdb=pfam -F seq='<test.seq' http://www.ebi.ac.uk/Tools/hmmer/search/hmmscan
+  curl -L -H 'Expect:' -H 'Accept:text/xml' -F hmmdb=pfam -F seq='<test.seq' https://www.ebi.ac.uk/Tools/hmmer/search/hmmscan
 
 hmmsearch searches
 ^^^^^^^^^^^^^^^^^^
@@ -119,11 +119,11 @@ with the default parameters.
 
 Searches should be POST-ed to the following url::
 
-  http://www.ebi.ac.uk/Tools/hmmer/search/hmmsearch
+  https://www.ebi.ac.uk/Tools/hmmer/search/hmmsearch
 
 Example::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F seq='<test.ali' http://www.ebi.ac.uk/Tools/hmmer/search/hmmsearch
+  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F seq='<test.ali' https://www.ebi.ac.uk/Tools/hmmer/search/hmmsearch
 
 jackhmmer searches
 ^^^^^^^^^^^^^^^^^^
@@ -137,11 +137,11 @@ the number of iterations if it converges.
 
 Searches should be POST-ed to the following url::
 
-  http://www.ebi.ac.uk/Tools/hmmer/search/jackhmmer
+  https://www.ebi.ac.uk/Tools/hmmer/search/jackhmmer
 
 Example::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F iterations=5 -F seq='<test1.fa' http://www.ebi.ac.uk/Tools/hmmer/search/jackhmmer
+  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F iterations=5 -F seq='<test1.fa' https://www.ebi.ac.uk/Tools/hmmer/search/jackhmmer
 
 
 Annotation searches
@@ -154,35 +154,35 @@ Annotation requests should be POST-ed to the following urls.
 
 Disorder::
 
-  http://www.ebi.ac.uk/Tools/hmmer/annotation/disorder
+  https://www.ebi.ac.uk/Tools/hmmer/annotation/disorder
 
 Example::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' -F  seq='<test.fa' http://www.ebi.ac.uk/Tools/hmmer/annotation/disorder
+  curl -L -H 'Expect:' -H 'Accept:text/xml' -F  seq='<test.fa' https://www.ebi.ac.uk/Tools/hmmer/annotation/disorder
 
 Coiled-coil::
 
-  http://www.ebi.ac.uk/Tools/hmmer/annotation/coils
+  https://www.ebi.ac.uk/Tools/hmmer/annotation/coils
 
 Example::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' -F  seq='<test.fa' http://www.ebi.ac.uk/Tools/hmmer/annotation/coils
+  curl -L -H 'Expect:' -H 'Accept:text/xml' -F  seq='<test.fa' https://www.ebi.ac.uk/Tools/hmmer/annotation/coils
 
 Transmembrane & Signal Peptides::
 
-  http://www.ebi.ac.uk/Tools/hmmer/annotation/phobius
+  https://www.ebi.ac.uk/Tools/hmmer/annotation/phobius
 
 Example::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' -F  seq='<test.fa' http://www.ebi.ac.uk/Tools/hmmer/annotation/phobius
+  curl -L -H 'Expect:' -H 'Accept:text/xml' -F  seq='<test.fa' https://www.ebi.ac.uk/Tools/hmmer/annotation/phobius
 
 Annotation results can be fetched with a GET request using the UUID supplied in the POST response::
 
-  http://www.ebi.ac.uk/Tools/hmmer/annotation/<annotation-type>/UUID
+  https://www.ebi.ac.uk/Tools/hmmer/annotation/<annotation-type>/UUID
 
 Example::
 
-  curl -H 'Expect:' -H 'Accept:text/xml' http://www.ebi.ac.uk/Tools/hmmer/annotation/phobius/4162F712-1DD2-11B2-B17E-C09EFE1DC403
+  curl -H 'Expect:' -H 'Accept:text/xml' https://www.ebi.ac.uk/Tools/hmmer/annotation/phobius/4162F712-1DD2-11B2-B17E-C09EFE1DC403
 
 Results
 ^^^^^^^
@@ -191,11 +191,11 @@ Search results can be retrieved using the job identifier that is returned in you
 The job identifier is a UUID (format such as 4162F712-1DD2-11B2-B17E-C09EFE1DC403).
 Thus, to retrieve your job, you can use the following URL in a GET request::
 
-  http://www.ebi.ac.uk/Tools/hmmer/results/$your_uuid?output=html
+  https://www.ebi.ac.uk/Tools/hmmer/results/$your_uuid?output=html
 
 Example::
 
-  http://www.ebi.ac.uk/Tools/hmmer/results/4162F712-1DD2-11B2-B17E-C09EFE1DC403?output=html
+  https://www.ebi.ac.uk/Tools/hmmer/results/4162F712-1DD2-11B2-B17E-C09EFE1DC403?output=html
 
 This is one of the few services where the returned format can be modified using a parameter.
 
@@ -306,7 +306,7 @@ command is formulated. Rather than using a redirect (<), a the symbol is
 used to force the content part of the request to be what is contained
 within the file, rather than being attached to the parameter::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F file='@batch.fasta' http://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+  curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F file='@batch.fasta' https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
 
 
 It is also possible to include an email address for notification of when
@@ -321,6 +321,6 @@ Fetching results
 
 Using curl to fetch results is very easy::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' http://www.ebi.ac.uk/Tools/hmmer/results/phmmer/CF5BCDA4-0C7E-11E0-AF4F-B1E277D6C7BA?output=text&ali=1&range=1,2
+  curl -L -H 'Expect:' -H 'Accept:text/xml' https://www.ebi.ac.uk/Tools/hmmer/results/phmmer/CF5BCDA4-0C7E-11E0-AF4F-B1E277D6C7BA?output=text&ali=1&range=1,2
 
 In this case we want to fetch the first two hits, with their alignments as a textual output format.
