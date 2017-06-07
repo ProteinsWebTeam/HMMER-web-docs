@@ -11,7 +11,7 @@ my $ua = LWP::UserAgent->new;
 $ua->timeout(20);
 $ua->env_proxy;
 
-my $host = "http://www.ebi.ac.uk/Tools/hmmer";
+my $host = "https://www.ebi.ac.uk/Tools/hmmer";
 my $search = "/search/phmmer";
 
 #Parameters
