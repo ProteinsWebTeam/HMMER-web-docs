@@ -15,7 +15,7 @@ my $json = JSON->new->allow_nonref;
 #Set up the job
 
 #URL to query
-my $rootUrl = "http://www.ebi.ac.uk/Tools/hmmer";
+my $rootUrl = "https://www.ebi.ac.uk/Tools/hmmer";
 my $url = $rootUrl."/search/jackhmmer";
 
 my $seq = ">2abl_A mol:protein length:163  ABL TYROSINE KINASE
