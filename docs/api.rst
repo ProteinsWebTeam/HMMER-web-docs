@@ -8,7 +8,8 @@ Introduction
 Using curl
 ^^^^^^^^^^
 
-The following section demonstrates a simple way of sending and retrieving XML using
+The following section demonstrates a simple way of
+sending and retrieving XML using
 the simple Unix command line tool curl.
 The following example POSTs the request to the server (our server configuration requires you to also unset the default value in the header for Expect, -H 'Expect:'): 
 
