@@ -8,22 +8,22 @@ opener = urllib2.build_opener(SmartRedirectHandler())
 urllib2.install_opener(opener);
 
 parameters = {
-              'seqdb':'pdb',
-              'seq':'>Seq\nKLRVLGYHNGEWCEAQTKNGQGWVPSNYITPVNSLENSIDKHSWYHGPVSRNAAEY'
-             }
+    'seqdb':'pdb',
+    'seq':'>Seq\nKLRVLGYHNGEWCEAQTKNGQGWVPSNYITPVNSLENSIDKHSWYHGPVSRNAAEY'
+}
 enc_params = urllib.urlencode(parameters);
 
 #post the seqrch request to the server
-request = urllib2.Request('http://www.ebi.ac.uk/Tools/hmmer/search/phmmer',enc_params)
+request = urllib2.Request('https://www.ebi.ac.uk/Tools/hmmer/search/phmmer',enc_params)
 
 #get the url where the results can be fetched from
 results_url = urllib2.urlopen(request).getheader('location')
 
 # modify the range, format and presence of alignments in your results here
 res_params = {
-              'output':'json',
-              'range':'1,10'
-             }
+    'output': 'json',
+    'range': '1,10'
+}
 
 # add the parameters to your request for the results
 enc_res_params = urllib.urlencode(res_params)
