@@ -1,6 +1,12 @@
 Changelog
 =========
 
+**Version 2.14, June 2017**
+
+- Changes
+
+  - UniProt release 2017_06
+
 **Version 2.13, May 2017**
 
 - Changes
