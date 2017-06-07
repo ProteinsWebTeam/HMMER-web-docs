@@ -4,7 +4,7 @@ import java.io.*;
 public class RESTClient{
   public static void main(String[] args) {
     try {
-        URL url = new URL("http://www.ebi.ac.uk/Tools/hmmer/search/hmmscan");
+        URL url = new URL("https://www.ebi.ac.uk/Tools/hmmer/search/hmmscan");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setDoOutput(true);
         connection.setDoInput(true);
