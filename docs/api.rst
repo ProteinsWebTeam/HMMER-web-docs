@@ -322,6 +322,6 @@ Fetching results
 
 Using curl to fetch results is very easy::
 
-  curl -L -H 'Expect:' -H 'Accept:text/xml' https://www.ebi.ac.uk/Tools/hmmer/results/phmmer/CF5BCDA4-0C7E-11E0-AF4F-B1E277D6C7BA?output=text&ali=1&range=1,2
+  curl -L -H 'Expect:' -H 'Accept:text/xml' https://www.ebi.ac.uk/Tools/hmmer/results/CF5BCDA4-0C7E-11E0-AF4F-B1E277D6C7BA?output=text&ali=1&range=1,2
 
 In this case we want to fetch the first two hits, with their alignments as a textual output format.
