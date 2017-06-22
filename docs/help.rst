@@ -11,7 +11,8 @@ use of sequence analysis.
 Helpdesk
 --------
 
-Your questions are important to us. Please contact us at hmmer-help@ebi.ac.uk.
+Your questions are important to us.
+Please contact us through our contact form at https://www.ebi.ac.uk/support/hmmer.
 We will respond as quickly as possible, but please bear
 in mind that we do not have a dedicated staff member to run the helpesk.
 
