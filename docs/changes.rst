@@ -1,6 +1,18 @@
 Changelog
 =========
 
+**Version 2.15, July 2017**
+
+- Changes
+
+  - UniProt release 2017_07
+  - New option “unselect all” for jackhmmer iterations
+  - New endpoints available as JSON (taxonomy and domain architecture)
+
+- Bug fixes
+
+  - Download of ClustalW, PSI-BLAST and PHYLIP file formats fixed
+
 **Version 2.14, June 2017**
 
 - Changes
