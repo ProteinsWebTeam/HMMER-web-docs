@@ -6,6 +6,8 @@ Changelog
 - Changes
 
   - UniProt release 2017_07
+  - Ensembl Genomes release 36
+  - Ensembl release 89
   - New option “unselect all” for jackhmmer iterations
   - New endpoints available as JSON (taxonomy and domain architecture)
 
