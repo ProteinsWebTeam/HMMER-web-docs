@@ -215,9 +215,9 @@ This is one of the few services where the returned format can be modified using 
 +-------------------+-------------------------------+-------------------------------+-------------------------------+
 |**Notes**          |The results are ordered by     |Sometimes you are not so       |The format of the results can  |
 |                   |E-value and as there can be    |interested in the alignment of |be modified with by setting    |
-|                   |thousands of matches to your   |the match to the query         |“output=$format”. The same can |
+|                   |thousands of matches to your   |the match to the query         |"output=$format". The same can |
 |                   |query, it can be useful to     |sequence. By default no        |be achieved by setting the     |
-|                   |retrieve a subset of results.  |alignments are returned, to    |“Accept” field in the HTTP     |
+|                   |retrieve a subset of results.  |alignments are returned, to    |"Accept" field in the HTTP     |
 |                   |The range is two, unsigned,    |keep results compact.          |header. If both the HTTP header|
 |                   |comma separated integers. The  |                               |and the parameter are set, we  |
 |                   |first integer is expected to be|                               |currently assume that the      |
@@ -234,7 +234,7 @@ This is one of the few services where the returned format can be modified using 
 |                   |range of 1,1000 is requested,  |                               |                               |
 |                   |then you will get 300 results. |                               |                               |
 |                   |If your starting integer is    |                               |                               |
-|                   |“out” of range, then no results|                               |                               |
+|                   |"out" of range, then no results|                               |                               |
 |                   |will be returned.              |                               |                               |
 +-------------------+-------------------------------+-------------------------------+-------------------------------+
 
@@ -243,6 +243,36 @@ Deleting results
 
 The results will normally only remain on the server for a maximum of one week; however they may be deleted
 by sending a DELETE request.
+
+Taxonomy and domain views
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The API may also be used to retrive the data behind the taxonomy and domain architecture tabs on the results
+page. For taxonomy the URL has the form::
+
+  https://www.ebi.ac.uk/Tools/hmmer/results/$your_uuid/taxonomy
+
+Example::
+
+  curl -s -H "Content-type: application/json" 'https://www.ebi.ac.uk/Tools/hmmer/results/8D5B74A0-6158-11E7-B311-1331132D729D/taxonomy'
+
+The fields returned are described in :ref:`Appendix F - JSON format`
+
+For domain architecture, two endpoints are provided. The first returns an overview of all architectures::
+
+  https://www.ebi.ac.uk/Tools/hmmer/results/$your_uuid/domain
+
+Example::
+
+  curl -s -H "Content-type: application/json" 'https://www.ebi.ac.uk/Tools/hmmer/results/8D5B74A0-6158-11E7-B311-1331132D729D/domain'
+
+The second queries an individual architecture identifier::
+
+  https://www.ebi.ac.uk/Tools/hmmer/results/$your_uuid/domain/$arch_id
+
+Example::
+
+  curl -s -H "Content-type: application/json" 'https://www.ebi.ac.uk/Tools/hmmer/results/D33FBDA4-6230-11E7-BC34-E492DBC3747A/domain/36055491190690'
 
 Examples
 ++++++++
@@ -268,14 +298,14 @@ hmmscan
 ^^^^^^^
 
 The following is a very basic Java source file that, once compiled
-and executed performs an hmmscan search. The response is returned
+and and executed performs an hmmscan search. The response is returned
 in JSON format. With this two stage POST and GET, you can POST the
 request in one format and get a response back in another by setting
 the Accept type. To get this example to work, you should save the
-code in a file called RESTClient.java. Then run the command “javac
-RESTClient.java”. Assuming that this is successful and a file called
+code in a file called RESTClient.java. Then run the command "javac
+RESTClient.java". Assuming that this is successful and a file called
 RESTClient.class is produced, you can execute the class by running the
-command “java RESTClient”
+command "java RESTClient"
 
 .. literalinclude:: _static/code/java_hmmscan.java
    :language: java
@@ -315,7 +345,7 @@ the batch search has been processed. Again, not particularly useful for
 an API, but it may be useful for keeping track of a pipeline. To specify
 an email via the command line, simply use the parameter email and set
 this to a valid email address. All of the other phmmer or hmmscan search
-parameters apply to the batch search.
+parameters apply to the batch search.
 
 Fetching results
 ^^^^^^^^^^^^^^^^

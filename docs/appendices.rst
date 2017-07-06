@@ -283,3 +283,29 @@ The job ID, also refered to as UUID (Universally Unique IDentifier),
 is a 36 character sequence that looks like
 *10F15DB0-2E1C-11E0-B944-D59DDB6B6FDE* and that uniquely identifies a
 job submitted on the website.
+
+------------------------
+Appendix F - JSON format
+------------------------
+
+The results visualised in the score, taxonomy and architecture views are all
+available using the API in JSON format. For the score endpoint, the object
+returned includes the Stats, Sequence and Domain hashes referred to above
+(Appendix A).
+
+The taxonomy endpoint provides a recursive hash of the tree with the keys
+
++------------------+------------------------------------------+
+| id               | NCBI taxonomy identifier                 |
++------------------+------------------------------------------+
+| parentid         | taxonomy identifier of parent            |
++------------------+------------------------------------------+
+| name             | taxonomy name                            |
++------------------+------------------------------------------+
+| hitcount         | number of hits to this node              |
++------------------+------------------------------------------+
+| hitdist          | binned log e-values of hits to this node |
++------------------+------------------------------------------+
+| children         | children of this node (recursive)        |
++------------------+------------------------------------------+
+
