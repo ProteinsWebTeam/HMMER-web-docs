@@ -199,7 +199,11 @@ Another difference is that each row in the results has a check box,
 which allows sequences to be either removed or added to the results (a
 checked box denotes that they will be used in the next iteration). This
 allows you to modify which sequences are included in successive rounds
-of jackhmmer. A button at the top and bottom of each page will allow you
+of jackhmmer. By default, all sequences above the significance threshold are
+included. As a convenience, an option to override this and deselect
+all sequences is provided. This might useful if you wish to manually add
+only a small number of sequences.
+A button at the top and bottom of each page will allow you
 to start the next iteration.
 
 .. image:: _static/images/jackhmmer_matches.gif
