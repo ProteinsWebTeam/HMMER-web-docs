@@ -1,6 +1,17 @@
 Changelog
 =========
 
+**Version 2.16, August 2017**
+
+- Changes
+
+  - UniProt release 2017_08
+  - Change some email templates to have tab-delimited headers and rows
+
+- New features
+
+  - Added information warning about next release across the website
+  
 **Version 2.15, July 2017**
 
 - Changes
