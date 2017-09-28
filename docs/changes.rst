@@ -1,6 +1,18 @@
 Changelog
 =========
 
+**Version 2.17, September 2017**
+
+- Changes
+
+  - UniProt release 2017_09
+  - Ensembl Genomes release 37
+  - Ensembl release 90
+
+- New features
+
+  - Better taxonomy viewer using `taxonomy-visualisation <https://github.com/ProteinsWebTeam/taxonomy-visualisation>`_ library
+
 **Version 2.16, August 2017**
 
 - Changes
