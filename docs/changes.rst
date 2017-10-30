@@ -1,6 +1,16 @@
 Changelog
 =========
 
+**Version 2.18, October 2017**
+
+- Changes
+
+  - UniProt release 2017_10
+  
+- Bug fixes
+
+  - Fix XML output for some API endpoints
+
 **Version 2.17, September 2017**
 
 - Changes
