@@ -6,6 +6,7 @@ Changelog
 - Changes
 
   - UniProt release 2017_10
+  - Gene3D version 16.0.0
   
 - Bug fixes
 
