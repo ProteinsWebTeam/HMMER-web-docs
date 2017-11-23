@@ -6,6 +6,7 @@ Changelog
 - Changes
 
   - UniProt release 2017_11
+  - MEROPS 12
 
 **Version 2.18, October 2017**
 
