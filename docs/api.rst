@@ -365,11 +365,11 @@ sense for some formats (e.g. tsv), but not others (such as an alignment).
 The results of each search need to be downloaded individually.
 
 The summary page may be requested as json or xml to make it easier to
-parse the list of individual:
+parse the list of individual::
 
-  curl -H 'Accept: application/json' 'https://www.ebi.ac.uk/Tools/hmmer/results/A67B56FE-CA07-11E7-A02C-F964E976C163/score';
+  curl -H 'Accept: application/json' 'https://www.ebi.ac.uk/Tools/hmmer/results/A67B56FE-CA07-11E7-A02C-F964E976C163/score'
 
 Once you have the list of IDs you can download any of the files
-programmatically, for example:
+programmatically, for example::
 
   curl 'https://www.ebi.ac.uk/Tools/hmmer/download/A67B56FE-CA07-11E7-A02C-F964E976C163.5/score?format=csv'
