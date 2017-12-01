@@ -355,3 +355,21 @@ Using curl to fetch results is very easy::
   curl -L -H 'Expect:' -H 'Accept:text/xml' https://www.ebi.ac.uk/Tools/hmmer/results/CF5BCDA4-0C7E-11E0-AF4F-B1E277D6C7BA?output=text&ali=1&range=1,2
 
 In this case we want to fetch the first two hits, with their alignments as a textual output format.
+
+Downloading files from batch searches
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For batch searches, it is unfortunately not possible to download files
+for all sequences in a single request. A single combined output might make
+sense for some formats (e.g. tsv), but not others (such as an alignment).
+The results of each search need to be downloaded individually.
+
+The summary page may be requested as json or xml to make it easier to
+parse the list of individual:
+
+  curl -H 'Accept: application/json' 'https://www.ebi.ac.uk/Tools/hmmer/results/A67B56FE-CA07-11E7-A02C-F964E976C163/score';
+
+Once you have the list of IDs you can download any of the files
+programmatically, for example:
+
+  curl 'https://www.ebi.ac.uk/Tools/hmmer/download/A67B56FE-CA07-11E7-A02C-F964E976C163.5/score?format=csv'
