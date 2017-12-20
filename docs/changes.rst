@@ -1,6 +1,13 @@
 Changelog
 =========
 
+**Version 2.20, December 2017**
+
+- Changes
+
+  - UniProt release 2017_12
+  - Ensembl release 91
+
 **Version 2.19, November 2017**
 
 - Changes
