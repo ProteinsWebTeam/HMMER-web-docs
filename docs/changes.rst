@@ -1,7 +1,7 @@
 Changelog
 =========
 
-**Version 2.21, December 2017**
+**Version 2.21, January 2018**
 
 - Changes
 
