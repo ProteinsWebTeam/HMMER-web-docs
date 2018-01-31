@@ -6,6 +6,7 @@ Changelog
 - Changes
 
   - UniProt release 2018_01
+  - Ensembl release 92
 
 **Version 2.20, December 2017**
 
