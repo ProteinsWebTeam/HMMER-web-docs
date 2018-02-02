@@ -242,7 +242,9 @@ Deleting results
 ^^^^^^^^^^^^^^^^
 
 The results will normally only remain on the server for a maximum of one week; however they may be deleted
-by sending a DELETE request.
+by sending a DELETE request::
+
+  curl -X DELETE -H 'Accept:application/json' https://www.ebi.ac.uk/Tools/hmmer/results/F36F96A4-0806-11E8-A990-C006DCC3747A/score
 
 Taxonomy and domain views
 ^^^^^^^^^^^^^^^^^^^^^^^^^
