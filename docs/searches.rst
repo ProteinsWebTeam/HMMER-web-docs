@@ -425,6 +425,10 @@ You can add for taxa from all taxonomic levels (e.g. Homo sapiens or Metazoa)
 to be included in your search.
 You can add several taxa.
 
+To *only* remove taxa, but keep all the other taxa, you can select the
+“Include all taxa” button. Now, the search box will only be removing taxa,
+instead of adding them
+
 Pre-defined Taxonomic Tree
 ++++++++++++++++++++++++++
 
