@@ -94,6 +94,9 @@ Profile HMM databases
   Models that are designed to provide a comprehensive and
   non-overlapping clustering of UniProtKB.
 
+* `TreeFam <http://www.treefam.org>`_ -
+  A database composed of phylogenetic trees inferred from animal genomes.
+
 The default database is Pfam.
 
 -----------------

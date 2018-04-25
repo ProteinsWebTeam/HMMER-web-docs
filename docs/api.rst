@@ -92,13 +92,13 @@ hmmscan searches
 
 Hmmscan also has two main parameters - a sequence and a profile HMM
 database - defined using the seq and hmmdb parameters respectively. We
-currently offer four profile HMM databases: Pfam, TIGRFAMs, Gene3D,
-Superfamily, and PIRSF. When searching against the former two, the
+currently offer six profile HMM databases: Pfam, TIGRFAMs, Gene3D,
+Superfamily, PIRSF and TreeFam. When searching against the first two, the
 cut-offs can be defined by the user (other parameters for controlling
-the search are defined in the search section). With the latter two HMM
-databases, all cut-off parameters will be ignored and the HMM database
-default parameters will be used. This is because Gene3D and Superfamily
-both use their own post-processing mechanisms to defined their domains,
+the search are defined in the search section). With the remaining databases
+all cut-off parameters will be ignored and the default HMM database
+parameters will be used. This is because these databases
+use their own post-processing mechanisms to define their domains,
 in addition to the hmmscan results.
 
 Searches should be POST-ed to the following url::
