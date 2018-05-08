@@ -1,6 +1,13 @@
 Changelog
 =========
 
+**Version 2.22, April 2018**
+
+- Changes
+
+  - UniProt release 2018_04
+  - Website annotated using `Schemas.org <https://schema.org/>`_ and current working version of `BioSchemas <http://bioschemas.org/>`_
+
 **Version 2.21, January 2018**
 
 - Changes
