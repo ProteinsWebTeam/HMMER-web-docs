@@ -6,6 +6,7 @@ Changelog
 - Changes
 
   - UniProt release 2018_04
+  - Introduced TreeFam, version 9, with post-processing using the default TreeFam e-value threshold and hit selection
   - Website annotated using `Schemas.org <https://schema.org/>`_ and current working version of `BioSchemas <http://bioschemas.org/>`_
 
 **Version 2.21, January 2018**
