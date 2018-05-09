@@ -367,6 +367,10 @@ converted into a profile as with phmmer.
 .. image:: _static/images/hmmscan_align.gif
    :alt: HMM alignments
 
+For searches against TreeFam the best hit only is shown, calculated as the
+hit with the lowest E-value below the threshold of 1e-29. If more than one hit
+have this E-value, that with the highest score is used.
+
 Database specific result fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
