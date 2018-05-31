@@ -1,6 +1,18 @@
 Changelog
 =========
 
+**Version 2.23, May 2018**
+
+- Changes
+
+  - UniProt release 2018_05
+  - Ensembl Genomes release 39
+  - Ensembl release 92
+
+- Bug fixes
+
+  - Improvements to the taxonomy page performance
+
 **Version 2.22, April 2018**
 
 - Changes
