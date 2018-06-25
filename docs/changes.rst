@@ -1,6 +1,16 @@
 Changelog
 =========
 
+**Version 2.24, June 2018**
+
+- Changes
+
+  - UniProt release 2018_06
+  
+- New Features
+
+  - Added new “fisheye” mode on the taxonomy viewer
+
 **Version 2.23, May 2018**
 
 - Changes
