@@ -1,6 +1,14 @@
 Changelog
 =========
 
+**Version 2.26, August 2018**
+
+- Changes
+
+  - Ensembl Genomes release 40
+  - Ensembl release 93
+  - `ChEMBL <https://www.ebi.ac.uk/chembl> added as a supported sequence database`_
+
 **Version 2.25, July 2018**
 
 - Changes
