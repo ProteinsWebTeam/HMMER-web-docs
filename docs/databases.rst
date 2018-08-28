@@ -69,6 +69,11 @@ Sequence databases
     Domains homologous to an inhibitory domain are also included, even if
     no inhibitory activity is known.
 
+  - `ChEMBL <https://www.ebi.ac.uk/chembl/>`_ -
+    A manually curated database of bioactive molecules with drug-like
+    properties. It brings together chemical, bioactivity and genomic data
+    to aid the translation of genomic information into effective new drugs.
+
 The default database is UniProt reference proteomes.
 
 ---------------------
