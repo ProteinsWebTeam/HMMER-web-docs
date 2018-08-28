@@ -7,7 +7,7 @@ Changelog
 
   - Ensembl Genomes release 40
   - Ensembl release 93
-  - `ChEMBL <https://www.ebi.ac.uk/chembl>`_ added as a supported sequence database
+  - `ChEMBL <https://www.ebi.ac.uk/chembl>`_ added as a supported sequence database (version 24)
 
 **Version 2.25, July 2018**
 
