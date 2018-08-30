@@ -9,6 +9,11 @@ Changelog
   - Ensembl release 93
   - `ChEMBL <https://www.ebi.ac.uk/chembl>`_ added as a supported sequence database (version 24)
 
+- Bug fixes
+
+  - Fix to searches against TreeFam using the API (prior to this, searches used the gathering threshold, which does
+    not apply to this database)
+
 **Version 2.25, July 2018**
 
 - Changes
