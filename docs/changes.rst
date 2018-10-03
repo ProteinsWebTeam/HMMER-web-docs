@@ -1,7 +1,7 @@
 Changelog
 =========
 
-**Version 2.28, August 2018**
+**Version 2.28, September 2018**
 
 - Changes
 
@@ -11,7 +11,7 @@ Changelog
 
   - Fix to display of position in queue for batch searches
 
-**Version 2.27, August 2018**
+**Version 2.27, September 2018**
 
 - Changes
 
