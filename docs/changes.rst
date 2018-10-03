@@ -1,6 +1,22 @@
 Changelog
 =========
 
+**Version 2.28, August 2018**
+
+- Changes
+
+  - Pfam release 32.0
+
+- Bug fixes
+
+  - Fix to display of position in queue for batch searches
+
+**Version 2.27, August 2018**
+
+- Changes
+
+  - UniProtKB release 2018_08
+
 **Version 2.26, August 2018**
 
 - Changes
