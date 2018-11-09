@@ -1,6 +1,24 @@
 Changelog
 =========
 
+**Version 2.30, November 2018**
+
+- Changes
+
+  - UniProtKB release 2018_10
+  - Ensembl Genomes release 41
+  - Ensembl release 94
+
+- New Features
+
+  - Added phylum as an optional column in the results table
+
+**Version 2.29, October 2018**
+
+- Changes
+
+  - UniProtKB release 2018_09
+
 **Version 2.28, September 2018**
 
 - Changes
