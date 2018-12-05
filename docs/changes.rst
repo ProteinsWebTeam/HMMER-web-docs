@@ -1,6 +1,12 @@
 Changelog
 =========
 
+**Version 2.31, December 2018**
+
+- Changes
+
+  - UniProtKB release 2018_11
+
 **Version 2.30, November 2018**
 
 - Changes
