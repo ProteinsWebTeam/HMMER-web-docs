@@ -145,6 +145,18 @@ Example::
   curl -L -H 'Expect:' -H 'Accept:text/xml' -F seqdb=pdb -F iterations=5 -F seq='<test1.fa' https://www.ebi.ac.uk/Tools/hmmer/search/jackhmmer
 
 
+Taxonomic restrictions
+^^^^^^^^^^^^^^^^^^^^^^
+
+For searches against a sequence database (i.e. all types excluding hmmscan) you may restrict your
+search by taxonomy. To do this, set the parameter taxFilterType=search, alongwith either or both of
+tax_included and tax_excluded, each of which takes a comma delimited list of taxonomy IDs.
+
+Example::
+
+  curl -L -H 'Expect:' -H 'Accept:application/json' -F taxFilterType=search -F tax_included=40674 -F tax_excluded=9606,10090 -F seqdb=pdb -F seq='<seq.fa' https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+
+
 Annotation searches
 ^^^^^^^^^^^^^^^^^^^
 
