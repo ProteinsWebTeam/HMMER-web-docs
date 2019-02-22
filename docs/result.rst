@@ -440,6 +440,16 @@ multiple HMMs are used to represent large, divergent families. We apply
 the same post processing to remove overlaps as Pfam to produce the
 graphic, but unlike Pfam, we show all matches in the table.
 
+When the sequence does not match the full length of the HMM that models
+the entry, matching domain fragments are shown. When a sequence match
+does not pass through the first position in the HMM, the N-terminal side
+of the domain graphic is drawn with a jagged edge instead of a curved
+edge. Similarly, when a sequence match does not pass through the last
+position of the HMM, the C-terminal side of the domain graphic is drawn
+with a jagged edge. In some rarer cases, the sequence match may not pass
+through either of the first or last positions of the HMM, in which case
+both sides are drawn with jagged edges.
+
 Model Match
 ^^^^^^^^^^^
 
