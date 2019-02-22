@@ -1,6 +1,22 @@
 Changelog
 =========
 
+**Version 2.33, February 2019**
+
+- Changes
+
+  - UniProtKB release 2019_02
+  - Ensembl Genomes release 42
+  - Ensembl release 95
+
+- New Features
+
+  - Fix to 'Taxonomy Search' and 'Accession Search' forms
+  - Added query alignment/HMM to 'Search Details' (previously the query was only shown
+    for fasta input), and taxonomic IDs if selected;
+    HMMs and alignments are truncated but the full input is available via a new /query
+    endpoint
+
 **Version 2.32, January 2019**
 
 - Changes
