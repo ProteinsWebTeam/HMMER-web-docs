@@ -9,9 +9,12 @@ Changelog
   - Ensembl Genomes release 42
   - Ensembl release 95
 
-- New Features
+- Bug fixes
 
   - Fix to 'Taxonomy Search' and 'Accession Search' forms
+
+- New features
+
   - Added query alignment/HMM to 'Search Details' (previously the query was only shown
     for fasta input), and taxonomic IDs if selected;
     HMMs and alignments are truncated but the full input is available via a new /query
@@ -37,7 +40,7 @@ Changelog
   - Ensembl Genomes release 41
   - Ensembl release 94
 
-- New Features
+- New features
 
   - Added phylum as an optional column in the results table
 
@@ -88,7 +91,7 @@ Changelog
 
   - UniProt release 2018_06
   
-- New Features
+- New features
 
   - Added new “fisheye” mode on the taxonomy viewer
 
