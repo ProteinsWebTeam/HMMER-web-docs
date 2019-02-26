@@ -607,8 +607,8 @@ the different search algorithms:
 | PSI-BLAST  | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
 |            | returned in PSI-BLAST format   |           |           |           |           |         |
 +------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| PH✔LIP     | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
-|            | returned in PH✔LIP format      |           |           |           |           |         |
+| PHYLIP     | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
+|            | returned in PHYLIP format      |           |           |           |           |         |
 +------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
 | Plain text | Designed to be human readable  | ✔         | ✔         | ✔         | ✔         |         |
 |            | with less information compared |           |           |           |           |         |
