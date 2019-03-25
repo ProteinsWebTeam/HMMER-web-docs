@@ -577,57 +577,60 @@ the different search algorithms:
 .. _STOCKHOLM: https://en.wikipedia.org/wiki/Stockholm_format
 .. _FASTA: http://en.wikipedia.org/wiki/FASTA_format
 
-+------------+--------------------------------+-----------------------------------------------+---------+
-| Format    | Description                     | Algorithm                                     | Gzipped |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-|                                             | phmmer    | hmmsearch | hmmscan   | jackhmmer |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| FASTA      | Single file containing         | ✔         | ✔         |           | ✔         | ✔       |
-|            | all the regions matched        |           |           |           |           |         |
-|            | in your hits in FASTA          |           |           |           |           |         |
-|            | format                         |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| Full       | As for FASTA, but the          | ✔         | ✔         |           | ✔         | ✔       |
-| Length     | full length sequences for      |           |           |           |           |         |
-| FASTA      | significant search hits        |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| Aligned    | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
-| FASTA      | returned in the aligned        |           |           |           |           |         |
-|            | FASTA_ format                  |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| STOCKHOLM  | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
-|            | returned in STOCKHOLM_         |           |           |           |           |         |
-|            | format. Useful if you wish to  |           |           |           |           |         |
-|            | use your results with the      |           |           |           |           |         |
-|            | command line version of HMMER  |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| ClustalW   | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
-|            | returned in ClustalW format    |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| PSI-BLAST  | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
-|            | returned in PSI-BLAST format   |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| PHYLIP     | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |
-|            | returned in PHYLIP format      |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| Plain text | Designed to be human readable  | ✔         | ✔         | ✔         | ✔         |         |
-|            | with less information compared |           |           |           |           |         |
-|            | to the other formats           |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| XML        | Machine readable with all the  | ✔         | ✔         | ✔         | ✔         |         |
-|            | output data from HMMER         |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| JSON       | As XML, but in JSON format     | ✔         | ✔         | ✔         | ✔         |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
-| HMM        | A profile HMM generated from   |           | ✔         |           | ✔         |         |
-|            | the uploaded multiple sequence |           |           |           |           |         |
-|            | alignment. LogoMat-M can be    |           |           |           |           |         |
-|            | used to generate a graphical   |           |           |           |           |         |
-|            | representation of the HMM      |           |           |           |           |         |
-+------------+--------------------------------+-----------+-----------+-----------+-----------+---------+
+Some formats support a range parameter to permit downloading a subset of the results. This is analagous to
+the that used for the score view (see :ref:`api-results`).
+
++------------+--------------------------------+-----------------------------------------------+---------+-------+
+| Format    | Description                     | Algorithm                                     | Gzipped | Range |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+|                                             | phmmer    | hmmsearch | hmmscan   | jackhmmer |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| FASTA      | Single file containing         | ✔         | ✔         |           | ✔         | ✔       | ✔     |
+|            | all the regions matched        |           |           |           |           |         |       |
+|            | in your hits in FASTA          |           |           |           |           |         |       |
+|            | format                         |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| Full       | As for FASTA, but the          | ✔         | ✔         |           | ✔         | ✔       | ✔     |
+| Length     | full length sequences for      |           |           |           |           |         |       |
+| FASTA      | significant search hits        |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| Aligned    | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |       |
+| FASTA      | returned in the aligned        |           |           |           |           |         |       |
+|            | FASTA_ format                  |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| STOCKHOLM  | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |       |
+|            | returned in STOCKHOLM_         |           |           |           |           |         |       |
+|            | format. Useful if you wish to  |           |           |           |           |         |       |
+|            | use your results with the      |           |           |           |           |         |       |
+|            | command line version of HMMER  |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| ClustalW   | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |       |
+|            | returned in ClustalW format    |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| PSI-BLAST  | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |       |
+|            | returned in PSI-BLAST format   |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| PHYLIP     | Significant search hits        | ✔         | ✔         |           | ✔         | ✔       |       |
+|            | returned in PHYLIP format      |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| Plain text | Designed to be human readable  | ✔         | ✔         | ✔         | ✔         |         | ✔     |
+|            | with less information compared |           |           |           |           |         |       |
+|            | to the other formats           |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| XML        | Machine readable with all the  | ✔         | ✔         | ✔         | ✔         |         | ✔     |
+|            | output data from HMMER         |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| JSON       | As XML, but in JSON format     | ✔         | ✔         | ✔         | ✔         |         | ✔     |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
+| HMM        | A profile HMM generated from   |           | ✔         |           | ✔         |         |       |
+|            | the uploaded multiple sequence |           |           |           |           |         |       |
+|            | alignment. LogoMat-M can be    |           |           |           |           |         |       |
+|            | used to generate a graphical   |           |           |           |           |         |       |
+|            | representation of the HMM      |           |           |           |           |         |       |
++------------+--------------------------------+-----------+-----------+-----------+-----------+---------+-------+
 
 Search details
-^^^^^^^^^^^^^^
+++++++++++++++
 
 The search details provides you with the exact time that the search was
 performed on our servers, the complete command used to perform the
@@ -647,7 +650,8 @@ here:
     RESESSPGQRSISLRYEGRVYHYRINTASDGKLYVSSESRFNTLAELV
     HHHSTVADGLITTLHYPAP
 
-We also include your query sequence in FASTA format, where applicable.
+We also include your query sequence, alignment or HMM (the latter two
+are truncated, but clicking on the link will show them in full).
 Should you have bookmarked or performed multiple searches and have lost
 track of which job id corresponds to which job, then this provides a way
 of tracking the search. You should also double check that this sequence
