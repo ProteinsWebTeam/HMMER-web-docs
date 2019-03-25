@@ -197,6 +197,8 @@ Example::
 
   curl -H 'Expect:' -H 'Accept:text/xml' https://www.ebi.ac.uk/Tools/hmmer/annotation/phobius/4162F712-1DD2-11B2-B17E-C09EFE1DC403
 
+.. _api-results:
+
 Results
 ^^^^^^^
 
@@ -373,13 +375,14 @@ In this case we want to fetch the first two hits, with their alignments as a tex
 Downloading files from batch searches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For batch searches, it is unfortunately not possible to download files
-for all sequences in a single request. A single combined output might make
+For batch searches, it is not possible to download results
+for all individual query sequences in a single request.
+A single combined output might make
 sense for some formats (e.g. tsv), but not others (such as an alignment).
 The results of each search need to be downloaded individually.
 
 The summary page may be requested as json or xml to make it easier to
-parse the list of individual::
+obtain the list of individual search IDs::
 
   curl -H 'Accept: application/json' 'https://www.ebi.ac.uk/Tools/hmmer/results/A67B56FE-CA07-11E7-A02C-F964E976C163/score'
 
