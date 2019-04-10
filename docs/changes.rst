@@ -1,6 +1,18 @@
 Changelog
 =========
 
+**Version 2.34, April 2019**
+
+- Changes
+
+  - UniProtKB release 2019_03
+
+- New features
+
+  - Download of results in text, tsv, json, xml, fasta and full length fasta
+    (i.e. all non-aligned formats) can now be done on a subset of the set of hits
+    using a 'range=from,to' parameter, as already implemented in the API.
+
 **Version 2.33, February 2019**
 
 - Changes
