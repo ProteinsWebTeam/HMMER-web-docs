@@ -1,6 +1,14 @@
 Changelog
 =========
 
+**Version 2.35, May 2019**
+
+- Changes
+
+  - UniProtKB release 2019_04
+  - Ensembl Genomes release 43
+  - Ensembl release 96
+
 **Version 2.34, April 2019**
 
 - Changes
