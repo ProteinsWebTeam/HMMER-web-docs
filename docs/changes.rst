@@ -1,7 +1,15 @@
 Changelog
 =========
 
-**Version 2.37, July 2019**
+**Version 2.38, 31st July 2019**
+
+- Changes
+
+  - UniProtKB release 2019_07
+  - Ensembl Genomes release 44
+  - Ensembl release 97
+
+**Version 2.37, 3rd July 2019**
 
 - Changes
 
