@@ -1,6 +1,13 @@
 Changelog
 =========
 
+**Version 2.39, September 2019**
+
+- Changes
+
+  - UniProtKB release 2019_08
+  - MEROPS 12.1
+
 **Version 2.38, 31st July 2019**
 
 - Changes
