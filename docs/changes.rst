@@ -1,6 +1,19 @@
 Changelog
 =========
 
+**Version 2.40, October 2019**
+
+- Changes
+
+  - UniProtKB release 2019_09
+
+- Bug fixes
+
+  - Offline (batch) searches: fixed a reliability issue and
+    corrected summary page for hmmscan results (now correctly lists
+    sequences with significant hits; previously this included some
+    hits where none of the domains were above the inclusion threshold)
+
 **Version 2.39, September 2019**
 
 - Changes
