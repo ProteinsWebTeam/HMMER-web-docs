@@ -1,6 +1,13 @@
 Changelog
 =========
 
+**Version 2.42, October 2021**
+
+- Changes
+
+  - Updated all databases to most recent version
+  - Added AlphaFold sequences database
+
 **Version 2.40, October 2019**
 
 - Changes
