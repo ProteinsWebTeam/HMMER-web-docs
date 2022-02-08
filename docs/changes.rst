@@ -1,6 +1,12 @@
 Changelog
 =========
 
+**Version 2.43, February 2022**
+
+- Changes
+
+  - Pfam release 35.0
+
 **Version 2.42, October 2021**
 
 - Changes
